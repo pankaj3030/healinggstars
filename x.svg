@@ -1,0 +1,24 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background circle -->
+  <circle cx="256" cy="256" r="256" fill="#0a1a2c"/>
+  
+  <!-- Gradient border -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#gradient)" stroke-width="4"/>
+  
+  <!-- X logo in secondary color -->
+  <path d="M315.4,153L394,153L323.1,238.6L407,359L333.2,359L281.9,283.5L222.8,359L144,359L220.9,267.3L142,153L217.8,153L264.1,222.3L315.4,153Z" fill="#ff8c42"/>
+  
+  <!-- Gradient definition for the border -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b3fa0"/>
+      <stop offset="100%" stop-color="#ff8c42"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Subtle star effect -->
+  <circle cx="420" cy="140" r="2" fill="#f0f0f0" opacity="0.7"/>
+  <circle cx="150" cy="120" r="1.5" fill="#f0f0f0" opacity="0.5"/>
+  <circle cx="110" cy="300" r="2" fill="#f0f0f0" opacity="0.6"/>
+  <circle cx="380" cy="380" r="1.5" fill="#f0f0f0" opacity="0.5"/>
+</svg>

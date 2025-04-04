@@ -1,0 +1,33 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background circle -->
+  <circle cx="256" cy="256" r="256" fill="#0a1a2c"/>
+  
+  <!-- Gradient border -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#gradient)" stroke-width="4"/>
+  
+  <!-- Instagram logo outline in secondary color -->
+  <g fill="#ff8c42">
+    <!-- Main square -->
+    <rect x="150" y="150" width="212" height="212" rx="55" ry="55" fill="none" stroke="#ff8c42" stroke-width="18"/>
+    
+    <!-- Center circle -->
+    <circle cx="256" cy="256" r="62" fill="none" stroke="#ff8c42" stroke-width="18"/>
+    
+    <!-- Camera dot -->
+    <circle cx="340" cy="172" r="15"/>
+  </g>
+  
+  <!-- Gradient definition for the border -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b3fa0"/>
+      <stop offset="100%" stop-color="#ff8c42"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Subtle star effect -->
+  <circle cx="380" cy="120" r="2" fill="#f0f0f0" opacity="0.7"/>
+  <circle cx="130" cy="100" r="1.5" fill="#f0f0f0" opacity="0.5"/>
+  <circle cx="90" cy="240" r="2" fill="#f0f0f0" opacity="0.6"/>
+  <circle cx="370" cy="380" r="1.5" fill="#f0f0f0" opacity="0.5"/>
+</svg>
