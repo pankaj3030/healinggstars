@@ -1568,7 +1568,9 @@
         </div>
     </footer>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer>
+        
+    </script>
     
     <script>
         // Animation for scrolling effects
@@ -1623,25 +1625,109 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
     
-    <script type="text/javascript">
+   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+        const contactForm = document.getElementById('contactForm');
         
-        // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            service: document.getElementById('service').value,
-            message: document.getElementById('message').value
-        };
-        alert('Thank you for your message! We will contact you soon.');
-        contactForm.reset(); 
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Validate email before sending
+            if (!validateEmail(formData.email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show loading indicator or disable submit button if you have one
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Sending...';
+            }
+            
+            // Send the data to your backend using fetch API
+            fetch('https://healinggstars.com/api/send-confirmation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Display success message
+                alert('Thank you for your message! We have sent a confirmation to your email.');
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Alternative: Use EmailJS for client-side email sending
+                sendEmailWithEmailJS(formData);
+            })
+            .finally(() => {
+                // Re-enable submit button
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Submit';
+                }
+            });
+        });
+        
+        // Function to validate email format
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+        
+        // Alternative function using EmailJS if you don't have a backend
+        function sendEmailWithEmailJS(formData) {
+            // Make sure EmailJS script is included in your HTML
+            // <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            
+            // Initialize EmailJS if not done elsewhere
+            // emailjs.init("YOUR_USER_ID");
+            
+            emailjs.send("service_id", "template_id", {
+                to_name: formData.name,
+                to_email: formData.email,
+                from_name: "Healing Stars",
+                message_html: `
+                    <h2>Thank you for contacting Healing Stars!</h2>
+                    <p>Dear ${formData.name},</p>
+                    <p>We have received your inquiry about ${formData.service}.</p>
+                    <p>Our team will contact you at ${formData.email} or ${formData.phone} within 24-48 hours.</p>
+                    <p>Your message:</p>
+                    <blockquote>${formData.message}</blockquote>
+                    <p>Warm regards,<br>The Healing Stars Team</p>
+                `
+            })
+            .then(function(response) {
+                console.log("Email sent successfully", response);
+                alert('Thank you for your message! We have sent a confirmation to your email.');
+                contactForm.reset();
+            })
+            .catch(function(error) {
+                console.error("Email sending failed:", error);
+                alert('Thank you for your message! We will contact you soon.');
+                contactForm.reset();
+            });
+        }
     });
-});</script>
+</script>
     
 
     <script>
