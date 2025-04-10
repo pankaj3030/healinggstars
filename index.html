@@ -1696,8 +1696,11 @@ s0.parentNode.insertBefore(s1,s0);
         
         // Alternative function using EmailJS if you don't have a backend
         function sendEmailWithEmailJS(formData) {
+            
             // Make sure EmailJS script is included in your HTML
-            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        
             
             Initialize EmailJS if not done elsewhere
              emailjs.init("YOUR_USER_ID");
