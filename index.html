@@ -1623,6 +1623,7 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+    
 <!--End of Tawk.to Script-->
     
    <script type="text/javascript">
@@ -1696,10 +1697,10 @@ s0.parentNode.insertBefore(s1,s0);
         // Alternative function using EmailJS if you don't have a backend
         function sendEmailWithEmailJS(formData) {
             // Make sure EmailJS script is included in your HTML
-            // <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
             
-            // Initialize EmailJS if not done elsewhere
-            // emailjs.init("YOUR_USER_ID");
+            Initialize EmailJS if not done elsewhere
+             emailjs.init("YOUR_USER_ID");
             
             emailjs.send("service_id", "template_id", {
                 to_name: formData.name,
