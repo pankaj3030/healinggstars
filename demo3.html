@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO: Add meta description & Open Graph tags -->
+  <meta name="description" content="Healingg Stars offers personalized astrology, numerology, tarot readings, energy healing & more. Trusted by 5000+ clients worldwide. Book your session today!" />
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:title" content="Healingg Stars - Astrology & Numerology Guidance" />
+  <meta property="og:description" content="Discover your cosmic path with expert astrologers & numerologists. Personalized consultations, transparent pricing, global service." />
+  <meta property="og:image" content="https://placehold.co/1200x630/6b3fa0/ffffff?text=Healingg+Stars" />
+  <meta property="og:url" content="https://www.healinggstars.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://www.google.com" />
+  <link rel="preconnect" href="https://embed.tawk.to" />
+  <link rel="preconnect" href="https://api.staticforms.xyz" />
+
+  <title>Healingg Stars - Astrology & Numerology</title>
+  <!-- Fallback font if Poppins fails to load -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </noscript>
+  <style>
+    :root {
+      --primary-color: #6b3fa0;
+      --secondary-color: #ff8c42;
+      --text-color: #f0f0f0;
+      --dark-bg: #0a1a2c;
+      --gradient-start: #170a35;
+      --gradient-end: #0f243a;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+        radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+        radial-gradient(2px 2px at 60px 110px, #fff, transparent),
+        radial-gradient(2px 2px at 80px 150px, #fff, transparent),
+        radial-gradient(2px 2px at 100px 190px, #fff, transparent),
+        radial-gradient(2px 2px at 120px 230px, #fff, transparent);
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      animation: twinkle 5s infinite;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background-color: rgba(10, 26, 44, 0.8);
+      backdrop-filter: blur(5px);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+    .logo h1 {
+      font-size: 1.6rem;
+      color: var(--text-color);
+      font-weight: 600;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: 0.3s;
+      position: relative;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--secondary-color);
+      transition: 0.3s;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content {
+      text-align: center;
+      z-index: 2;
+      max-width: 1000px;
+      padding: 0 20px;
+    }
+    .hero-content h1 {
+      font-size: 2.7rem;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: fadeInDown 1s ease;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease 0.3s forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .zodiac-wheel {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 570px;
+      height: 570px;
+      animation: rotate 60s linear infinite;
+      z-index: 1;
+      opacity: 0.4;
+    }
+    @keyframes rotate {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    .btn {
+      padding: 12px 30px;
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+    .btn:hover {
+      background-color: #ff7324;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 140, 66, 0.4);
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 140, 66, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 140, 66, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 140, 66, 0); }
+    }
+    section {
+      padding: 100px 5%;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: var(--text-color);
+    }
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      color: #c5c5c5;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-header h2 {
+      font-size: 36px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: var(--secondary-color);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: rgba(26, 41, 66, 0.5);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .service-img {
+      height: 200px;
+      overflow: hidden;
+    }
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .service-card:hover .service-img img {
+      transform: scale(1.1);
+    }
+    .service-content {
+      padding: 20px;
+    }
+    .service-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+    .service-content p {
+      color: #c5c5c5;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .service-subheadings {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    .service-subheadings li {
+      color: #c5c5c5;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      list-style-type: none;
+      position: relative;
+      padding-left: 20px;
+    }
+    .service-subheadings li::before {
+      content: '✧';
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .about-img {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .about-img img {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+      transition: transform 0.5s ease;
+    }
+    .about-img:hover img {
+      transform: scale(1.05);
+    }
+    .about-content h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .about-content p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .zodiac-section {
+      padding: 80px 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: rgba(10, 26, 44, 0.5);
+      margin: 40px 0;
+    }
+    .zodiac-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .zodiac-wheel-static {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      position: relative;
+    }
+    .zodiac-wheel-static img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 0 30px rgba(107, 63, 160, 0.5);
+    }
+    .zodiac-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    .zodiac-info h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--text-color);
+    }
+    .zodiac-info p {
+      margin-bottom: 20px;
+      line-height: 1.8;
+      color: #c5c5c5;
+    }
+    .why-us-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .why-us-item {
+      background: rgba(26, 41, 66, 0.5);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-us-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .why-us-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    }
+    .why-us-item h3 {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: var(--text-color);
+    }
+    .why-us-item p {
+      color: #c5c5c5;
+      line-height: 1.6;
+    }
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      background: rgba(107, 63, 160, 0.2);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      font-size: 2rem;
+      color: var(--secondary-color);
+    }
+    .testimonials {
+      background: linear-gradient(to right, rgba(23, 10, 53, 0.7), rgba(15, 36, 58, 0.7));
+      padding: 100px 5%;
+      position: relative;
+    }
+    .testimonial-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .testimonial {
+      padding: 30px;
+      border-radius: 15px;
+      background-color: rgba(26, 41, 66, 0.5);
+      margin-bottom: 30px;
+    }
+    .testimonial p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .client-name {
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+    .contact-form {
+      background-color: rgba(26, 41, 66, 0.5);
+      padding: 30px;
+      border-radius: 15px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--text-color);
+      font-size: 1rem;
+    }
+    .form-group textarea {
+      height: 150px;
+      resize: vertical;
+    }
+    footer {
+      background-color: var(--dark-bg);
+      padding: 50px 5% 20px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    .footer-col h3 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--secondary-color);
+    }
+    .footer-col p,
+    .footer-col a {
+      color: #a0a0a0;
+      margin-bottom: 10px;
+      display: block;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .footer-col a:hover {
+      color: var(--secondary-color);
+      transform: translateX(5px);
+    }
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    .social-icons a:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-5px);
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #a0a0a0;
+      font-size: 0.9rem;
+    }
+    #consultation-process {
+      padding: 100px 5%;
+      background: linear-gradient(to right, rgba(23, 10, 53, 0.7), rgba(15, 36, 58, 0.7));
+      position: relative;
+    }
+    .process-steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 50px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .step {
+      flex-basis: calc(20% - 20px);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      right: -50%;
+      width: 100%;
+      height: 2px;
+      background-color: var(--secondary-color);
+      z-index: 1;
+    }
+    .step-number {
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 50%;
+      background-color: var(--secondary-color);
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0 auto 20px;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
+    }
+    .step h3 {
+      color: var(--text-color);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    .step p {
+      color: #c5c5c5;
+      font-size: 0.9rem;
+    }
+    #pricing {
+      padding: 100px 5%;
+      position: relative;
+    }
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pricing-card {
+      background: rgba(26, 41, 66, 0.5);
+      border-radius: 15px;
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      border: 1px solid rgba(107, 63, 160, 0.3);
+    }
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .pricing-card.popular {
+      transform: scale(1.05);
+      border: 2px solid var(--secondary-color);
+      box-shadow: 0 10px 30px rgba(255, 140, 66, 0.2);
+    }
+    .pricing-card.popular:hover {
+      transform: scale(1.05) translateY(-10px);
+    }
+    .popular-tag {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 8px 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 0 15px 0 15px;
+    }
+    .pricing-header {
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .pricing-header h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--text-color);
+    }
+    .price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: 5px;
+    }
+    .duration {
+      font-size: 0.9rem;
+      color: #a0a0a0;
+    }
+    .pricing-features {
+      padding: 30px 20px;
+    }
+    .pricing-features ul {
+      list-style: none;
+    }
+    .pricing-features ul li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 25px;
+      color: #c5c5c5;
+    }
+    .pricing-features ul li::before {
+      content: '✧';
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+    }
+    .pricing-btn {
+      display: block;
+      margin: 0 20px 20px;
+      text-align: center;
+    }
+    .specialized-services {
+      margin-top: 80px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .specialized-services h3 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      color: var(--text-color);
+    }
+    .specialized-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .specialized-item {
+      background: rgba(26, 41, 66, 0.5);
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(107, 63, 160, 0.3);
+    }
+    .specialized-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .specialized-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+    .specialized-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+    .specialized-item p {
+      color: #c5c5c5;
+      font-size: 0.9rem;
+    }
+    .service-price {
+      margin-top: 15px;
+      padding: 8px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .price-tag {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+      display: inline-block;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .price-tag::before {
+      content: "Starts From ";
+      font-size: 1.0rem;
+      position: relative;
+      top: -5px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .region-notification {
+      background: rgba(255, 140, 66, 0.1);
+      border-left: 3px solid var(--secondary-color);
+      padding: 10px 15px;
+      margin: 20px 0;
+      border-radius: 0 5px 5px 0;
+      font-size: 0.9rem;
+    }
+    .region-selector {
+      margin-left: 20px;
+      position: relative;
+    }
+    .region-selector select {
+      appearance: none;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-color);
+      padding: 8px 30px 8px 15px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+    .region-selector select:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .region-selector::after {
+      content: '↓';
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: var(--secondary-color);
+    }
+    @media screen and (max-width: 991px) {
+      .hero-content h1 { font-size: 2.5rem; }
+      .zodiac-wheel, .zodiac-wheel-static { width: 300px; height: 300px; }
+      .about-grid, .contact { grid-template-columns: 1fr; }
+      .why-us-container { grid-template-columns: repeat(2, 1fr); }
+      .zodiac-container { flex-direction: column; }
+      .step { flex-basis: calc(33.33% - 20px); margin-bottom: 40px; }
+      .step:nth-child(3)::after { display: none; }
+      .pricing-card { width: calc(50% - 20px); min-width: 280px; }
+      .pricing-card.popular { transform: scale(1); }
+      .pricing-card.popular:hover { transform: translateY(-10px); }
+    }
+    @media screen and (max-width: 768px) {
+      header { padding: 15px 5%; flex-wrap: wrap; }
+      .logo h1 { font-size: 1.2rem; }
+      nav ul li { margin: 0 8px; }
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content p { font-size: 1rem; }
+      section { padding: 60px 5%; }
+      .section-title h2 { font-size: 2rem; }
+      .why-us-container { grid-template-columns: 1fr; }
+      .zodiac-wheel-static { width: 250px; height: 250px; }
+      .pricing-card { width: 100%; max-width: 350px; margin-bottom: 30px; }
+      .step { flex-basis: calc(50% - 20px); }
+      .step:nth-child(2)::after, .step:nth-child(4)::after { display: none; }
+      .region-selector { margin: 15px 0 0 0; width: 100%; order: 3; }
+      .region-selector select { width: 100%; }
+    }
+    @media screen and (max-width: 480px) {
+      .step { flex-basis: 100%; margin-bottom: 40px; }
+      .step:not(:last-child)::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <header>
+    <div class="logo">
+      <img src="https://placehold.co/60x60/6b3fa0/ffffff?text=HS" alt="Healingg Stars Logo" loading="lazy" />
+      <h1>Healingg Stars</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <img src="https://placehold.co/570x570/6b3fa0/ffffff?text=Zodiac" alt="Zodiac Wheel" class="zodiac-wheel" loading="lazy" />
+    <div class="hero-content">
+      <h1>Discover Your Path to Harmony & Success</h1>
+      <p>Unlock your cosmic destiny through ancient wisdom and modern spiritual techniques. Our guides illuminate your unique soul blueprint, revealing your true purpose and potential. Experience transformation as we help you release blockages, align with universal energies, and manifest abundance in all areas of life.</p>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-title">
+      <h2>About Us</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://placehold.co/500x500/6b3fa0/ffffff?text=About+Us" alt="About Healingg Stars" loading="lazy" />
+      </div>
+      <div class="about-content">
+        <h3>Healingg Stars</h3>
+        <p>We are Healingg Stars, a dedicated team of experienced astrologers and numerologists passionate about guiding you through life's journey using ancient wisdom and cosmic insights.</p>
+        <p>With over two decades of combined experience, our practitioners have helped thousands of clients navigate important life decisions, understand relationship dynamics, and discover their true purpose.</p>
+        <p>Our approach combines traditional astrological and numerological methods with modern psychological insights to provide you with practical guidance that resonates with your unique life circumstances.</p>
+        <a href="#contact" class="btn">Connect With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-us">
+    <div class="section-title">
+      <h2>Why Choose Us</h2>
+    </div>
+    <p class="section-intro">With our rich experience of 10+ years and 5000+ clients based across India and overseas, you can bank upon us for a few simple reasons:</p>
+    <div class="why-us-container">
+      <div class="why-us-item"><div class="icon-circle">★</div><h3>Honest Guidance</h3><p>We provide the most honest and scientific opinion without false commitments.</p></div>
+      <div class="why-us-item"><div class="icon-circle">♥</div><h3>Dedicated Attention</h3><p>We listen patiently to understand your concerns completely.</p></div>
+      <div class="why-us-item"><div class="icon-circle">✧</div><h3>Accessible Solutions</h3><p>No expensive remedies—practical and affordable solutions.</p></div>
+      <div class="why-us-item"><div class="icon-circle">✦</div><h3>Value-Driven</h3><p>Comprehensive consultations and follow-up support.</p></div>
+      <div class="why-us-item"><div class="icon-circle">♢</div><h3>Empowerment Focus</h3><p>We motivate you to optimize your potential.</p></div>
+      <div class="why-us-item"><div class="icon-circle">✴</div><h3>Authentic Approach</h3><p>We give a true picture without sugar-coating reality.</p></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+    <div class="services-grid">
+      <!-- Repeated pattern for 8 services with lazy images and semantic alt text -->
+      <div class="service-card">
+        <div class="service-img"><img src="https://placehold.co/300x200/6b3fa0/ffffff?text=Personal+Astrology" alt="Personal Astrology Reading" loading="lazy" /></div>
+        <div class="service-content">
+          <h3>Personal Astrology</h3>
+          <p>Gain deeper understanding through natal chart readings.</p>
+          <ul class="service-subheadings">
+            <li>Birth Chart Analysis</li><li>Transit Forecasts</li><li>Career Guidance</li><li>Relationship Compatibility</li>
+          </ul>
+          <div class="service-price"><span class="price-tag personal_astrology">$80</span></div>
+        </div>
+      </div>
+      <!-- Other 7 cards follow same pattern – omitted for brevity but present in full code -->
+      <div class="service-card">
+        <div class="service-img"><img src="https://placehold.co/300x200/ff8c42/ffffff?text=Numerology" alt="Numerology Analysis" loading="lazy" /></div>
+        <div class="service-content">
+          <h3>Numerology Analysis</h3>
+          <p>Discover how numbers influence your destiny.</p>
+          <ul class="service-subheadings">
+            <li>Life Path Numbers</li><li>Name Analysis</li><li>Compatibility</li><li>Year Cycles</li>
+          </ul>
+          <div class="service-price"><span class="price-tag price-numerology">$75</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://placehold.co/300x200/6b3fa0/ffffff?text=Relationship" alt="Relationship Compatibility" loading="lazy" /></div>
+        <div class="service-content">
+          <h3>Relationship Compatibility</h3>
+          <p>Understand dynamics through synastry & numerology.</p>
+          <ul class="service-subheadings">
+            <li>Astrological Synastry</li><li>Numerological Compatibility</li><li>Timing</li><li>Conflict Resolution</li>
+          </ul>
+          <div class="service-price"><span class="price-tag price-relationship_compatibility">$95</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://placehold.co/300x200/ff8c42/ffffff?text=Business" alt="Business Astrology" loading="lazy" /></div>
+        <div class="service-content">
+          <h3>Business Astrology</h3>
+          <p>Align decisions with cosmic timing.</p>
+          <ul class="service-subheadings">
+            <li>Business Timing</li><li>Partnership Compatibility</li><li>Financial Forecasting</li><li>Career Analysis</li>
+          </ul>
+          <div class="service-price"><span class="price-tag price-business_astrology">$120</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://placehold.co/300x200/6b3fa0/ffffff?text=EFT" alt="EFT & TFT Therapy" loading="lazy" /></div>
+        <div class="service-content">
+          <h3>EFT & TFT</h3>
+          <p>Release emotional blocks with tapping therapy.</p>
+          <ul class="service-subheadings">
+            <li>Stress Reduction</li><li>Phobia Treatment</li><li>Pain Management</li><li>Addiction Support</li>
+          </ul>
+          <div class="service-price"><span class="price-tag price-eft_tft">$85</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://placehold.co/300x200/ff8c42/ffffff?text=Crystal" alt="Crystal Healing" loading="lazy" /></div>
+        <div class="service-content">
+          <h3>Crystal Healing</h3>
+          <p>Balance body, mind, and spirit with crystals.</p>
+          <ul class="service-subheadings">
+            <li>Chakra Healing</li><li>Emotional Healing</li><li>Pain Relief</li><li>Spiritual Growth</li>
+          </ul>
+          <div class="service-price"><span class="price-tag price-crystal_healing">$70</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://placehold.co/300x200/6b3fa0/ffffff?text=Energy" alt="Energy Clearing" loading="lazy" /></div>
+        <div class="service-content">
+          <h3>Energy Clearing & Healing</h3>
+          <p>Cleanse your aura and promote wellbeing.</p>
+          <ul class="service-subheadings">
+            <li>Aura Cleansing</li><li>Physical Healing</li><li>Trauma Healing</li><li>Pet Healing</li>
+          </ul>
+          <div class="service-price"><span class="price-tag price-energy_clearing">$80</span></div>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-img"><img src="https://placehold.co/300x200/ff8c42/ffffff?text=Tarot" alt="Tarot Reading" loading="lazy" /></div>
+        <div class="service-content">
+          <h3>Tarot Reading</h3>
+          <p>Gain insights into past, present, and future.</p>
+          <ul class="service-subheadings">
+            <li>Personal Reading</li><li>Relationship Guidance</li><li>Spiritual Growth</li><li>Angelic Messages</li>
+          </ul>
+          <div class="service-price"><span class="price-tag price-tarot_readings">$65</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="section-title">
+      <h2>Our Pricing</h2>
+    </div>
+    <p class="section-intro">Transparent pricing with packages tailored to your needs. All include personalized guidance and follow-up support.</p>
+    <div class="pricing-container">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Analysis Consultation</h3>
+          <div id="basic-price" class="price">$100</div>
+          <p class="duration">60 Minutes</p>
+        </div>
+        <div class="pricing-features">
+          <ul>
+            <li>Single Topic Focus</li><li>Detailed Analysis</li><li>Email Summary</li><li>1 Follow-up Question</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn pricing-btn">Book Now</a>
+      </div>
+      <div class="pricing-card popular">
+        <div class="popular-tag">Most Popular</div>
+        <div class="pricing-header">
+          <h3>Comprehensive Reading</h3>
+          <div id="comprehensive-price" class="price">$200</div>
+          <p class="duration">90 Minutes</p>
+        </div>
+        <div class="pricing-features">
+          <ul>
+            <li>Multiple Life Areas</li><li>In-depth Analysis</li><li>Written Report</li><li>2-Week Email Support</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn pricing-btn">Book Now</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Premium Package</h3>
+          <div id="premium-price" class="price">$350</div>
+          <p class="duration">3 Sessions</p>
+        </div>
+        <div class="pricing-features">
+          <ul>
+            <li>Complete Life Analysis</li><li>Detailed Report</li><li>3-Month Support</li><li>Custom Healing Plan</li>
+          </ul>
+        </div>
+        <a href="#contact" class="btn pricing-btn">Book Now</a>
+      </div>
+    </div>
+    <div class="specialized-services">
+      <h3>Specialized Services</h3>
+      <div class="specialized-grid">
+        <div class="specialized-item"><h4>Business Astrology</h4><div id="business-price" class="specialized-price">$150</div><p>Strategic guidance for business decisions</p></div>
+        <div class="specialized-item"><h4>Couple's Compatibility</h4><div id="couples-price" class="specialized-price">$125</div><p>Comprehensive analysis for two people</p></div>
+        <div class="specialized-item"><h4>Energy Healing</h4><div id="energy-price" class="specialized-price">$85</div><p>Full chakra balancing session</p></div>
+        <div class="specialized-item"><h4>EFT/TFT Therapy</h4><div id="therapy-price" class="specialized-price">$90</div><p>Targeted emotional healing</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="section-title">
+      <h2>Testimonials</h2>
+    </div>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"The astrological guidance was incredibly accurate and insightful. Helped me gain clarity during a challenging time."</p>
+        <div class="client-name">- Sarah J., Mumbai</div>
+      </div>
+      <div class="testimonial">
+        <p>"After years of relationship struggles, the consultation provided clarity and practical solutions without pushing expensive remedies."</p>
+        <div class="client-name">- Priya M., Delhi</div>
+      </div>
+      <div class="testimonial">
+        <p>"The business name correction made a noticeable difference in client engagement within months. Truly unique approach."</p>
+        <div class="client-name">- Anand S., Chennai</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consultation-process">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Consultation Process</h2>
+        <p>A simple journey to unlock your potential</p>
+      </div>
+      <div class="process-steps">
+        <div class="step"><div class="step-number">1</div><h3>Book</h3><p>Schedule online or via phone</p></div>
+        <div class="step"><div class="step-number">2</div><h3>Prepare</h3><p>Share birth details & questions</p></div>
+        <div class="step"><div class="step-number">3</div><h3>Consult</h3><p>Dedicated time with experts</p></div>
+        <div class="step"><div class="step-number">4</div><h3>Report</h3><p>Detailed insights & recommendations</p></div>
+        <div class="step"><div class="step-number">5</div><h3>Support</h3><p>Ongoing guidance as you implement changes</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="contact">
+      <form class="contact-form" action="https://api.staticforms.xyz/submit" method="POST">
+        <input type="hidden" name="accessKey" value="e06fc60a-521a-4ef6-8608-0acccc312b30" />
+        <input type="hidden" name="subject" value="New Contact from Healingg Stars Website" />
+        <input type="hidden" name="replyTo" value="@email" />
+        <input type="hidden" name="redirectTo" value="https://www.healinggstars.com/#thankyou" />
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="$phone" placeholder="Enter your phone number" />
+        </div>
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <input type="text" id="service" name="$service" placeholder="What service are you interested in?" />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell us more about what you're looking for" required></textarea>
+        </div>
+        <input type="text" name="honeypot" style="display:none;" />
+        <div class="g-recaptcha" data-sitekey="6Lex0hIrAAAAALueSCG3HJZnc-LU8xgZZryvs4e-"></div>
+        <br />
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h3>Healingg Stars</h3>
+        <p>Guiding you through life's journey with cosmic wisdom.</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/healinggstars/" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://www.instagram.com/healinggstars/" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://x.com/healinggstars" aria-label="X (Twitter)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.5 16h4.5l-11.5 -16z"></path><path d="M4 20l6.5 -6.5"></path><path d="M13.5 13.5l6.5 6.5"></path></svg>
+          </a>
+          <a href="https://www.youtube.com/@healinggstars" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <p>10, Welford Place, Coventry, United Kingdom</p>
+        <p>Phone: <span id="obfuscated-phone">+44-7835189700</span></p>
+        <p>Email: <span id="obfuscated-email">info [at] healinggstars [dot] com</span></p>
+        <p>Hours: Mon-Sat, 9AM - 6PM</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 Healingg Stars. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Defer non-critical scripts -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    // Obfuscate email & phone for security
+    document.getElementById('obfuscated-email').textContent = 'info@healinggstars.com';
+    document.getElementById('obfuscated-phone').textContent = '+44-7835189700';
+
+    // Scroll animations
+    document.addEventListener('DOMContentLoaded', function () {
+      const animateOnScroll = (selector, delay = 0) => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach((el, i) => {
+          setTimeout(() => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            setTimeout(() => {
+              el.style.transition = 'all 0.5s ease';
+              el.style.opacity = '1';
+              el.style.transform = 'translateY(0)';
+            }, 100);
+          }, i * 200 + delay);
+        });
+      };
+
+      animateOnScroll('.service-card');
+      animateOnScroll('.why-us-item', 300);
+
+      // Consultation steps animation
+      const steps = document.querySelectorAll('.step');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      steps.forEach(step => observer.observe(step));
+    });
+  </script>
+
+  <!-- Tawk.to chat - deferred -->
+  <script type="text/javascript">
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/67f6ec32341807190ee14d84/1ioe8l9de';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+
+  <!-- Region-based pricing logic - optimized -->
+  <script>
+    const regionData = {
+      'global': { symbol: '$', prices: { basic: 100, comprehensive: 200, premium: 350, business: 150, couples: 125, energy: 85, therapy: 90 } },
+      'in': { symbol: '₹', prices: { basic: 1499, comprehensive: 2499, premium: 4999, business: 1111, couples: 1111, energy: 1111, therapy: 1111 } },
+      'uk': { symbol: '£', prices: { basic: 69, comprehensive: 99, premium: 199, business: 49, couples: 69, energy: 59, therapy: 39 } },
+      'eu': { symbol: '€', prices: { basic: 90, comprehensive: 180, premium: 320, business: 140, couples: 115, energy: 80, therapy: 85 } },
+      'us': { symbol: '$', prices: { basic: 100, comprehensive: 200, premium: 350, business: 150, couples: 125, energy: 85, therapy: 90 } },
+      'ca': { symbol: 'C$', prices: { basic: 130, comprehensive: 260, premium: 450, business: 200, couples: 170, energy: 110, therapy: 120 } }
+    };
+
+    function mapCountryToRegion(cc) {
+      const map = { 'IN': 'in', 'GB': 'uk', 'US': 'us', 'CA': 'ca' };
+      if (['DE','FR','IT','ES','NL','BE','AT','GR','PT'].includes(cc)) return 'eu';
+      return map[cc] || 'global';
+    }
+
+    async function detectRegion() {
+      try {
+        const res = await fetch('https://ipapi.co/json/', { timeout: 3000 });
+        const data = await res.json();
+        return mapCountryToRegion(data.country_code || 'XX');
+      } catch (e) {
+        console.warn('Geo-detection failed, using global pricing');
+        return 'global';
+      }
+    }
+
+    function updatePrices(region) {
+      const r = regionData[region] || regionData.global;
+      const els = {
+        basic: 'basic-price',
+        comprehensive: 'comprehensive-price',
+        premium: 'premium-price',
+        business: 'business-price',
+        couples: 'couples-price',
+        energy: 'energy-price',
+        therapy: 'therapy-price'
+      };
+      Object.entries(els).forEach(([key, id]) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = r.symbol + r.prices[key];
+      });
+    }
+
+    // Initialize pricing after DOM loads
+    document.addEventListener('DOMContentLoaded', async () => {
+      const region = await detectRegion();
+      updatePrices(region);
+    });
+  </script>
+</body>
+</html>
+
