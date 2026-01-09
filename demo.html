@@ -1,1605 +1,965 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert astrology, numerology, and spiritual healing services. Discover your path to harmony and success with certified practitioners. Personal readings, business guidance, energy healing, and more. Over 5000+ satisfied clients.">
-    <meta name="keywords" content="astrology, numerology, spiritual healing, tarot reading, energy clearing, crystal healing, birth chart analysis">
-    <meta name="author" content="Healingg Stars">
+    
+    <!-- SEO & Social Meta 2026 Standards -->
+    <title>Healingg Stars | Astrology, Numerology & Energy Healing | UK & Worldwide</title>
+    <meta name="description" content="Professional astrology, numerology, tarot readings, EFT therapy, crystal healing & energy clearing. Honest guidance without expensive remedies. Online consultations from Coventry, UK. 10+ years experience serving 5000+ clients globally.">
+    <meta name="keywords" content="astrology consultation UK, numerology reading online, tarot reading, EFT therapy, crystal healing, energy healing, relationship compatibility">
+    
+    <!-- Canonical & Robots -->
+    <link rel="canonical" href="https://www.healinggstars.com/">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph Tags for Social Media -->
-    <meta property="og:title" content="Healingg Stars - Astrology & Numerology Services">
-    <meta property="og:description" content="Discover your cosmic destiny through ancient wisdom and modern spiritual techniques.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Healingg Stars - Professional Astrology & Spiritual Healing Services">
+    <meta property="og:description" content="Unlock your cosmic destiny with expert astrology, numerology & energy healing consultations. Online sessions worldwide from UK. Honest, practical guidance.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.healinggstars.com">
-    
-    <!-- Twitter Card -->
+    <meta property="og:url" content="https://www.healinggstars.com/">
+    <meta property="og:image" content="https://www.healinggstars.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Healingg Stars">
+
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Healingg Stars - Astrology & Numerology">
-    <meta name="twitter:description" content="Expert spiritual guidance and healing services">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.healinggstars.com">
-    
-    <!-- Security Headers -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com/recaptcha/">
-    
-    <title>Healingg Stars - Astrology & Numerology Services</title>
-    
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="twitter:title" content="Healingg Stars - Astrology, Numerology & Spiritual Guidance">
+    <meta name="twitter:description" content="Expert cosmic guidance for career, relationships & personal growth. 10+ years serving 5000+ clients worldwide.">
+    <meta name="twitter:image" content="https://www.healinggstars.com/images/og-image.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+    <!-- Performance Hints & Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://embed.tawk.to" crossorigin>
+    <link rel="preconnect" href="https://api.staticforms.xyz">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://www.gstatic.com">
+
+    <!-- Modern Font Loading -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+
+    <!-- Critical CSS (Above the Fold - ~4.2kB) -->
     <style>
         :root {
-            --primary-color: #6b3fa0;
-            --secondary-color: #ff8c42;
-            --text-color: #f0f0f0;
-            --dark-bg: #0a1a2c;
+            --primary: #6b3fa0;
+            --secondary: #ff8c42;
+            --text: #f0f0f0;
+            --dark: #0a1a2c;
             --gradient-start: #170a35;
             --gradient-end: #0f243a;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-        }
-    
-        body {
-            background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-        
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background-image: radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-                              radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
-                              radial-gradient(2px 2px at 60px 110px, #ffffff, rgba(0,0,0,0)),
-                              radial-gradient(2px 2px at 80px 150px, #ffffff, rgba(0,0,0,0)),
-                              radial-gradient(2px 2px at 100px 190px, #ffffff, rgba(0,0,0,0)),
-                              radial-gradient(2px 2px at 120px 230px, #ffffff, rgba(0,0,0,0));
-            background-repeat: repeat;
-            background-size: 200px 200px;
-            animation: twinkle 5s infinite;
-            will-change: opacity;
-        }
-        
-        @keyframes twinkle {
-            0% { opacity: 0.7; }
-            50% { opacity: 1; }
-            100% { opacity: 0.7; }
-        }
-        
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            background-color: rgba(10, 26, 44, 0.95);
-            backdrop-filter: blur(5px);
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-        }
-        
-        .logo h1 {
-            font-size: 1.6rem;
-            color: var(--text-color);
-            font-weight: 600;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 15px;
-        }
-        
-        nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: 0.3s;
-            position: relative;
-        }
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--secondary-color);
-            transition: 0.3s;
-        }
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-        
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 80px;
-        }
-        
-        .hero-content {
-            text-align: center;
-            z-index: 2;
-            max-width: 1000px;
-            padding: 0 20px;
-        }
-        
-        .hero-content h1 {
-            font-size: 2.7rem;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #a18cd1, #fbc2eb);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeInDown 1s ease;
-        }
-        
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease 0.3s forwards;
-            opacity: 0;
-            line-height: 1.6;
-        }
-        
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .zodiac-wheel {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 570px;
-            height: 570px;
-            animation: rotate 60s linear infinite;
-            z-index: 1;
-            opacity: 0.2;
-            will-change: transform;
-        }
-        
-        @keyframes rotate {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-        
-        .btn {
-            padding: 12px 30px;
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
-        
-        .btn:hover {
-            background-color: #ff7324;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 140, 66, 0.4);
-        }
-        
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(255, 140, 66, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(255, 140, 66, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(255, 140, 66, 0);
-            }
-        }
-        
-        section {
-            padding: 100px 5%;
-            scroll-margin-top: 80px;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--text-color);
-        }
-        
-        .section-intro {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-            color: #c5c5c5;
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-header h2 {
-            font-size: 36px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background: rgba(26, 41, 66, 0.5);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(107, 63, 160, 0.3);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-            background: rgba(107, 63, 160, 0.1);
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 20px;
-        }
-        
-        .service-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--text-color);
-        }
-        
-        .service-content p {
-            color: #c5c5c5;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-        
-        .service-subheadings {
-            margin-top: 15px;
-            margin-bottom: 20px;
-            list-style: none;
-        }
-        
-        .service-subheadings li {
-            color: #c5c5c5;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .service-subheadings li::before {
-            content: '✧';
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-        }
-        
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-img {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-        
-        .about-img img {
-            width: 80%;
-            display: block;
-            border-radius: 15px;
-            transition: transform 0.5s ease;
-        }
-        
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-        
-        .about-content h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        .about-content p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        .why-us-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .why-us-item {
-            background: rgba(26, 41, 66, 0.5);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(107, 63, 160, 0.3);
-        }
-        
-        .why-us-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-        }
-        
-        .why-us-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .why-us-item h3 {
-            font-size: 1.5rem;
-            margin: 20px 0;
-            color: var(--text-color);
-        }
-        
-        .why-us-item p {
-            color: #c5c5c5;
-            line-height: 1.6;
-        }
-        
-        .icon-circle {
-            width: 80px;
-            height: 80px;
-            background: rgba(107, 63, 160, 0.2);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            font-size: 2rem;
-            color: var(--secondary-color);
-        }
-        
-        .testimonials {
-            background: linear-gradient(to right, rgba(23, 10, 53, 0.7), rgba(15, 36, 58, 0.7));
-            padding: 100px 5%;
-            position: relative;
-        }
-        
-        .testimonial-container {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            text-align: center;
-        }
-        
-        .testimonial {
-            padding: 30px;
-            border-radius: 15px;
-            background-color: rgba(26, 41, 66, 0.5);
-            border: 1px solid rgba(107, 63, 160, 0.3);
-        }
-        
-        .testimonial p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        
-        .client-name {
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-        
-        .contact {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .contact-form {
-            background-color: rgba(26, 41, 66, 0.5);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid rgba(107, 63, 160, 0.3);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-color);
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px;
-            border-radius: 5px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--text-color);
-            font-size: 1rem;
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            background-color: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 10px rgba(255, 140, 66, 0.2);
-        }
-        
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        
-        .contact-info {
-            background-color: rgba(26, 41, 66, 0.5);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid rgba(107, 63, 160, 0.3);
-        }
-        
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--text-color);
-        }
-        
-        .contact-info p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #c5c5c5;
-        }
-        
-        .form-status {
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: none;
-        }
-        
-        .form-status.success {
-            background-color: rgba(52, 211, 153, 0.2);
-            color: #86efac;
-            border: 1px solid rgba(52, 211, 153, 0.5);
-            display: block;
-        }
-        
-        .form-status.error {
-            background-color: rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
-            border: 1px solid rgba(239, 68, 68, 0.5);
-            display: block;
-        }
-        
-        footer {
-            background-color: var(--dark-bg);
-            padding: 50px 5% 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .footer-col h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--secondary-color);
-        }
-        
-        .footer-col p, .footer-col a {
-            color: #a0a0a0;
-            margin-bottom: 10px;
-            display: block;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        
-        .footer-col a:hover {
-            color: var(--secondary-color);
-            transform: translateX(5px);
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icons a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #a0a0a0;
-            font-size: 0.9rem;
-        }
-        
-        #consultation-process {
-            padding: 100px 5%;
-            background: linear-gradient(to right, rgba(23, 10, 53, 0.7), rgba(15, 36, 58, 0.7));
-            position: relative;
-        }
-
-        .process-steps {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 50px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            gap: 20px;
-        }
-
-        .step {
-            flex: 1;
-            min-width: 150px;
-            text-align: center;
-            position: relative;
-            transition: transform 0.3s ease;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .step:nth-child(1) { animation-delay: 0s; }
-        .step:nth-child(2) { animation-delay: 0.1s; }
-        .step:nth-child(3) { animation-delay: 0.2s; }
-        .step:nth-child(4) { animation-delay: 0.3s; }
-        .step:nth-child(5) { animation-delay: 0.4s; }
-
-        .step:hover {
-            transform: translateY(-10px);
-        }
-
-        .step:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            top: 40px;
-            left: calc(100% + 10px);
-            width: calc((100vw - 100px) / 4);
-            max-width: 80px;
-            height: 2px;
-            background-color: var(--secondary-color);
-            z-index: 1;
-        }
-
-        .step-number {
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-            border-radius: 50%;
-            background-color: var(--secondary-color);
-            color: white;
-            font-size: 30px;
-            font-weight: bold;
-            margin: 0 auto 20px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
-        }
-
-        .step h3 {
-            color: var(--text-color);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .step p {
-            color: #c5c5c5;
-            font-size: 0.9rem;
-        }
-
-        #pricing {
-            padding: 100px 5%;
-            position: relative;
-        }
-
-        .pricing-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 50px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .pricing-card {
-            background: rgba(26, 41, 66, 0.5);
-            border-radius: 15px;
-            overflow: hidden;
-            width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            border: 1px solid rgba(107, 63, 160, 0.3);
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .pricing-card.popular {
-            transform: scale(1.05);
-            border: 2px solid var(--secondary-color);
-            box-shadow: 0 10px 30px rgba(255, 140, 66, 0.2);
-        }
-
-        .pricing-card.popular:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-
-        .popular-tag {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 8px 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-radius: 0 15px 0 15px;
-        }
-
-        .pricing-header {
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .pricing-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--text-color);
-        }
-
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 5px;
-        }
-
-        .duration {
-            font-size: 0.9rem;
-            color: #a0a0a0;
-        }
-
-        .pricing-features {
-            padding: 30px 20px;
-        }
-
-        .pricing-features ul {
-            list-style: none;
-        }
-
-        .pricing-features ul li {
-            margin-bottom: 15px;
-            position: relative;
-            padding-left: 25px;
-            color: #c5c5c5;
-        }
-
-        .pricing-features ul li::before {
-            content: '✧';
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-        }
-
-        .pricing-btn {
-            display: block;
-            margin: 0 20px 20px;
-            text-align: center;
-        }
-
-        .specialized-services {
-            margin-top: 80px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .specialized-services h3 {
-            text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 40px;
-            color: var(--text-color);
-        }
-
-        .specialized-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .specialized-item {
-            background: rgba(26, 41, 66, 0.5);
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(107, 63, 160, 0.3);
-        }
-
-        .specialized-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .specialized-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--text-color);
-        }
-
-        .specialized-price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-        }
-
-        .specialized-item p {
-            color: #c5c5c5;
-            font-size: 0.9rem;
-        }
-
-        .service-price {
-            margin-top: 15px;
-            padding: 8px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .price-tag {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--secondary-color);
-            display: inline-block;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .price-tag::before {
-            content: "Starts From ";
-            font-size: 1.0rem;
-            position: relative;
-            top: -5px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        @media screen and (max-width: 991px) {
-            .about-grid,
-            .contact {
-                grid-template-columns: 1fr;
-            }
-            
-            .step:not(:last-child)::after {
-                display: none;
-            }
-            
-            nav ul {
-                gap: 10px;
-            }
-        }
-        
-        @media screen and (max-width: 768px) {
-            header {
-                flex-wrap: wrap;
-                padding: 15px 5%;
-            }
-            
-            .logo h1 {
-                font-size: 1.2rem;
-            }
-            
-            nav ul {
-                width: 100%;
-                justify-content: center;
-                gap: 10px;
-                margin-top: 10px;
-            }
-            
-            section {
-                padding: 60px 5%;
-            }
-            
-            .pricing-card {
-                width: 100%;
-                max-width: 350px;
-            }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;scroll-padding-top:80px}
+        body{
+            font-family:'Poppins',system-ui,sans-serif;
+            background:linear-gradient(to bottom,var(--gradient-start),var(--gradient-end));
+            color:var(--text);
+            line-height:1.6;
+            overflow-x:hidden;
+        }
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        
+        /* Header */
+        header{position:fixed;top:0;width:100%;padding:1rem 5%;background:rgba(10,26,44,.9);backdrop-filter:blur(10px);z-index:1000;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+        .logo{display:flex;align-items:center;gap:1rem;text-decoration:none}
+        .logo img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+        .logo h1{font-size:1.4rem;font-weight:600;color:var(--text)}
+        nav ul{list-style:none;display:flex;gap:2rem;align-items:center}
+        nav a{color:var(--text);text-decoration:none;font-weight:500;position:relative;transition:.3s;font-size:.95rem}
+        nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--secondary);transition:.3s}
+        nav a:hover::after{width:100%}
+        .mobile-menu{display:none;position:absolute;top:100%;right:0;background:var(--dark);flex-direction:column;gap:1rem;padding:1rem;border-radius:0 0 10px 10px;box-shadow:0 5px 20px rgba(0,0,0,.3)}
+        .hamburger{display:flex;flex-direction:column;width:25px;height:20px;cursor:pointer;gap:3px}
+        .hamburger span{display:block;height:3px;width:100%;background:var(--text);transition:.3s;border-radius:2px}
+        .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
+        .hamburger.active span:nth-child(2){opacity:0}
+        .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+        
+        /* Hero Section */
+        .hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:0 5%;position:relative;overflow:hidden}
+        .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 80%,rgba(107,63,160,.1) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,140,66,.1) 0%,transparent 50%);animation:heroGlow 8s ease-in-out infinite alternate}
+        @keyframes heroGlow{0%{opacity:.6}100%{opacity:1}}
+        .hero-content{max-width:800px;padding:2rem 0;z-index:2;position:relative}
+        .hero-content h1{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:1.5rem;background:linear-gradient(135deg,#a18cd1,#fbc2eb);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;animation:fadeInUp 1s ease}
+        .hero-content p{font-size:1.1rem;margin-bottom:2rem;color:#d0d0d0;animation:fadeInUp 1s ease .3s both}
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        
+        .zodiac-hero{width:300px;height:300px;max-width:100%;margin:0 auto 2rem;opacity:.6;animation:rotateSlow 40s linear infinite}
+        @keyframes rotateSlow{to{transform:rotate(360deg)}}
+        
+        .btn{display:inline-block;padding:1rem 2.5rem;background:linear-gradient(135deg,var(--secondary),#ff7324);color:white;text-decoration:none;border-radius:50px;font-weight:500;transition:all .3s ease;font-size:1rem;box-shadow:0 4px 15px rgba(255,140,66,.3);position:relative;overflow:hidden}
+        .btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,hsla(0,0%,100%,.2),transparent);transition:.5s}
+        .btn:hover::before{left:100%}
+        .btn:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(255,140,66,.4)}
+        
+        /* Section Styles */
+        section{padding:80px 0;position:relative}
+        .section-title{text-align:center;margin-bottom:3rem}
+        .section-title h2{font-size:clamp(2rem,5vw,3rem);position:relative;display:inline-block;padding-bottom:1rem;color:var(--text);font-weight:600}
+        .section-title h2::after{content:'';position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:60px;height:3px;background:linear-gradient(90deg,var(--primary),var(--secondary))}
+        .section-intro{text-align:center;max-width:800px;margin:0 auto 3rem;color:#c5c5c5;font-size:1.1rem;line-height:1.7}
+        
+        /* Grid Systems */
+        .grid{display:grid;gap:2rem}
+        .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+        .grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+        .grid-4{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+        
+        /* Cards */
+        .card{background:rgba(26,41,66,.6);border-radius:16px;overflow:hidden;transition:all .4s cubic-bezier(.25,.46,.45,.94);border:1px solid rgba(107,63,160,.2);position:relative}
+        .card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--primary),var(--secondary),transparent)}
+        .card:hover{transform:translateY(-12px);box-shadow:0 20px 40px rgba(0,0,0,.3);border-color:var(--secondary)}
+        .card-img{position:relative;overflow:hidden;height:200px}
+        .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+        .card:hover .card-img img{transform:scale(1.08)}
+        .card-content{padding:1.5rem}
+        .card h3{font-size:1.3rem;margin-bottom:.8rem;color:var(--text);font-weight:600}
+        .card p{color:#c5c5c5;margin-bottom:1rem;line-height:1.6}
+        .card ul{list-style:none;padding:0}
+        .card li{position:relative;padding-left:1.5rem;margin-bottom:.5rem;color:#c5c5c5;font-size:.95rem}
+        .card li::before{content:'✦';position:absolute;left:0;color:var(--secondary)}
+        
+        /* Why Us Grid */
+        .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+        .why-card{text-align:center;padding:2rem;background:rgba(26,41,66,.5);border-radius:16px;transition:all .3s ease;border:1px solid rgba(255,255,255,.1)}
+        .why-card:hover{transform:translateY(-8px);background:rgba(26,41,66,.7)}
+        .icon-circle{width:80px;height:80px;margin:0 auto 1rem;background:linear-gradient(135deg,rgba(107,63,160,.2),rgba(255,140,66,.2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem}
+        
+        /* Pricing Cards */
+        .pricing-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;margin:3rem 0}
+        .pricing-card{width:320px;flex:1 1 300px;background:linear-gradient(145deg,rgba(26,41,66,.8),rgba(10,26,44,.8));border-radius:20px;overflow:hidden;transition:all .4s ease;border:2px solid rgba(107,63,160,.3);position:relative}
+        .pricing-card.popular{border-color:var(--secondary);transform:scale(1.02)}
+        .popular-badge{position:absolute;top:1rem;right:1rem;background:var(--secondary);color:white;padding:.5rem .8rem;border-radius:20px;font-size:.8rem;font-weight:600;transform:translateY(-50%)}
+        .pricing-header{padding:2rem;text-align:center;border-bottom:1px solid rgba(255,255,255,.1)}
+        .pricing-header h3{font-size:1.4rem;margin-bottom:.5rem;color:var(--text)}
+        .price{font-size:3rem;font-weight:700;color:var(--secondary);margin-bottom:.3rem}
+        .duration{color:#a0a0a0;font-size:.9rem}
+        .pricing-features{padding:1.5rem}
+        .pricing-features ul{list-style:none}
+        .pricing-features li{padding:.5rem 0 .5rem 1.5rem;position:relative;color:#c5c5c5;margin-bottom:.5rem}
+        .pricing-features li::before{content:'✓';position:absolute;left:0;color:var(--secondary);font-weight:bold}
+        .pricing-btn{display:block;margin:1.5rem 1.5rem 1rem;text-align:center}
+        
+        /* Testimonials */
+        .testimonials{background:linear-gradient(135deg,rgba(23,10,53,.8),rgba(15,36,58,.8));padding:100px 5%}
+        .testimonial-grid{display:grid;gap:2rem;max-width:800px;margin:0 auto}
+        .testimonial{background:rgba(26,41,66,.6);padding:2rem;border-radius:16px;border-left:4px solid var(--secondary)}
+        .testimonial p{font-style:italic;margin-bottom:1rem;line-height:1.7;font-size:1.1rem}
+        .client-name{font-weight:600;color:var(--secondary);text-align:right}
+        
+        /* Contact Form */
+        .contact-grid{display:grid;gap:3rem;grid-template-columns:1fr 1fr}
+        .contact-form{background:rgba(26,41,66,.6);padding:2rem;border-radius:16px;border:1px solid rgba(255,255,255,.1)}
+        .form-group{margin-bottom:1.5rem}
+        .form-group label{display:block;margin-bottom:.5rem;font-weight:500;color:var(--text)}
+        .form-group input,.form-group textarea{width:100%;padding:1rem;border:1px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.05);color:var(--text);font-family:inherit;font-size:1rem;transition:border-color .3s}
+        .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--secondary);box-shadow:0 0 0 3px rgba(255,140,66,.1)}
+        .form-group textarea{height:120px;resize:vertical}
+        
+        /* Footer */
+        footer{background:var(--dark);padding:3rem 0 1rem}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
+        .footer-col h3{font-size:1.2rem;margin-bottom:1rem;color:var(--text);position:relative;padding-bottom:.5rem}
+        .footer-col h3::after{content:'';position:absolute;bottom:0;left:0;width:40px;height:2px;background:var(--secondary)}
+        .footer-col a,.footer-col p{color:#a0a0a0;text-decoration:none;display:block;margin-bottom:.8rem;transition:.3s}
+        .footer-col a:hover{color:var(--secondary);transform:translateX(5px)}
+        .social-grid{display:flex;gap:1rem;margin-top:1rem}
+        .social-link{width:44px;height:44px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s ease}
+        .social-link:hover{background:var(--secondary);transform:translateY(-3px)}
+        .copyright{text-align:center;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);color:#808080;font-size:.9rem}
+        
+        /* Animations */
+        @keyframes fadeIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        .fade-in{animation:fadeIn .6s ease forwards;opacity:0}
+        .fade-in:nth-child(1){animation-delay:.1s}
+        .fade-in:nth-child(2){animation-delay:.2s}
+        .fade-in:nth-child(3){animation-delay:.3s}
+        .fade-in:nth-child(4){animation-delay:.4s}
+        .fade-in:nth-child(5){animation-delay:.5s}
+        .fade-in:nth-child(6){animation-delay:.6s}
+        
+        /* Responsive */
+        @media (max-width:768px){
+            header{padding:1rem;flex-wrap:wrap;gap:1rem}
+            .mobile-menu{display:none}
+            .mobile-menu.active{display:flex}
+            nav ul{display:none;flex-direction:column;width:100%;gap:1rem}
+            nav ul.active{display:flex}
+            .hamburger{display:block}
+            .contact-grid{grid-template-columns:1fr}
+            .pricing-grid{flex-direction:column;align-items:center}
+            .hero{padding:0}
+        }
+        
+        @media (max-width:480px){
+            .hero-content h1{font-size:2rem}
+            .hero-content p{font-size:1rem}
+            section{padding:60px 0}
         }
     </style>
+
+    <!-- Main Stylesheet (Deferred Loading) -->
+    <link rel="stylesheet" href="css/main.css" media="print" onload="this.media='all'">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://www.healinggstars.com/#organization",
+      "name": "Healingg Stars",
+      "url": "https://www.healinggstars.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.healinggstars.com/images/logo.png",
+        "width": 200,
+        "height": 60
+      },
+      "description": "Professional astrology, numerology, tarot reading, EFT therapy, crystal healing and energy clearing services. 10+ years experience serving 5000+ clients worldwide.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10, Welford Place",
+        "addressLocality": "Coventry",
+        "addressRegion": "West Midlands",
+        "postalCode": "CV1 4DS",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.4066,
+        "longitude": -1.5122
+      },
+      "telephone": "+44-7835189700",
+      "email": "info@healinggstars.com",
+      "openingHours": "Mo-Sa 09:00-18:00",
+      "priceRange": "£",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+44-7835189700",
+        "contactType": "customer service",
+        "email": "info@healinggstars.com",
+        "availableLanguage": ["English"]
+      }],
+      "sameAs": [
+        "https://www.facebook.com/healinggstars",
+        "https://www.instagram.com/healinggstars",
+        "https://x.com/healinggstars",
+        "https://www.youtube.com/@healinggstars"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Healingg Stars Team",
+        "description": "Experienced astrologers and numerologists with over 20 years combined experience"
+      },
+      "areaServed": ["GB", "IN", "US", "EU", "CA"],
+      "serviceType": ["Astrology Consultation", "Numerology Reading", "Tarot Reading", "EFT Therapy", "Crystal Healing", "Energy Healing"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "5000",
+        "bestRating": "5"
+      }
+    }
+    </script>
+
+    <!-- Additional Service Schema -->
+    <script type="application/ld+json">
+    [{
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Personal Astrology Consultation",
+      "description": "Comprehensive natal chart analysis, transit forecasts, career guidance and relationship compatibility",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Astrology",
+      "areaServed": ["GB", "IN", "US", "EU"],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "price": "29",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "29",
+          "unitText": "GBP"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Numerology Analysis",
+      "description": "Life path numbers, destiny analysis, name correction and personal year cycles",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Numerology",
+      "areaServed": ["GB", "IN", "US", "EU"],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "GBP",
+        "price": "39",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "39",
+          "unitText": "GBP"
+        }
+      }
+    }]
+    </script>
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://embed.tawk.to https://www.google.com https://www.gstatic.com https://www.recaptcha.net;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https: blob:;
+        connect-src 'self' https://api.staticforms.xyz https://embed.tawk.to https://www.google.com https://www.recaptcha.net;
+        frame-src 'self' https://www.google.com https://recaptcha.google.com;
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self' https://api.staticforms.xyz;
+        report-uri /csp-violation-report-endpoint;
+    ">
+
+    <!-- Privacy & Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 </head>
 <body>
-    <div class="stars"></div>
-    
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Healingg Stars Logo"/>
+
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner">
+        <a href="/" class="logo" aria-label="Healingg Stars Homepage">
+            <img src="images/logo.png" alt="Healingg Stars Logo" width="52" height="52" loading="lazy" decoding="async">
             <h1>Healingg Stars</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+        </a>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+        </button>
     </header>
-    
-    <section class="hero" id="home">
-        <img src="astrologycircle.png" alt="Zodiac Wheel" class="zodiac-wheel"/>
-        <div class="hero-content">
-            <h1>Discover Your Path to Harmony & Success</h1>
-            <p>Unlock your cosmic destiny through ancient wisdom and modern spiritual techniques. Our guides illuminate your unique soul blueprint, revealing your true purpose and potential. Experience transformation as we help you release blockages, align with universal energies, and manifest abundance in all areas of life.</p>
-            <a href="#services" class="btn">Explore Services</a>
-        </div>
-    </section>
-     
-    <section id="about">
-        <div class="section-title">
-            <h2>About Us</h2>
-        </div>
-        <div class="about-grid">
-            <div class="about-img">
-                <img src="aboutus.jpeg" alt="About Healingg Stars"/>
-            </div>
-            <div class="about-content">
-                <h3>Healingg Stars</h3>
-                <p>We are Healingg Stars, a dedicated team of experienced astrologers and numerologists passionate about guiding you through life's journey using ancient wisdom and cosmic insights.</p>
-                <p>With over two decades of combined experience, our practitioners have helped thousands of clients navigate important life decisions, understand relationship dynamics, and discover their true purpose.</p>
-                <p>Our approach combines traditional astrological and numerological methods with modern psychological insights to provide you with practical guidance that resonates with your unique life circumstances.</p>
-                <a href="#contact" class="btn">Connect With Us</a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="why-us">
-        <div class="section-title">
-            <h2>Why Choose Us</h2>
-        </div>
-        <p class="section-intro">With our rich experience of 10+ years and 5000+ clients based across India and overseas, you can bank upon us for a few simple reasons:</p>
-        <div class="why-us-container">
-            <div class="why-us-item">
-                <div class="icon-circle">★</div>
-                <h3>Honest Guidance</h3>
-                <p>We provide the most honest and scientific opinion to our clients without any false commitments.</p>
-            </div>
-            <div class="why-us-item">
-                <div class="icon-circle">♥</div>
-                <h3>Dedicated Attention</h3>
-                <p>We give proper time and listen patiently to understand our clients' concerns and situations completely.</p>
-            </div>
-            <div class="why-us-item">
-                <div class="icon-circle">✧</div>
-                <h3>Accessible Solutions</h3>
-                <p>No expensive remedies - we focus on practical and affordable solutions to help you succeed.</p>
-            </div>
-            <div class="why-us-item">
-                <div class="icon-circle">✦</div>
-                <h3>Value-Driven</h3>
-                <p>We give more than value for your money with comprehensive consultations and follow-up support.</p>
-            </div>
-            <div class="why-us-item">
-                <div class="icon-circle">♢</div>
-                <h3>Empowerment Focus</h3>
-                <p>We motivate clients to optimize their potential rather than creating dependencies.</p>
-            </div>
-            <div class="why-us-item">
-                <div class="icon-circle">✴</div>
-                <h3>Authentic Approach</h3>
-                <p>We believe in giving a true picture about the person without sugar-coating reality.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="services">
-        <div class="section-title">
-            <h2>Our Services</h2>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-img">
-                    <img src="personalastrology.jpg" alt="Personal Astrology"/>
-                </div>
-                <div class="service-content">
-                    <h3>Personal Astrology</h3>
-                    <p>Gain a deeper understanding of your life path through comprehensive natal chart readings tailored just for you.</p>
-                    <ul class="service-subheadings">
-                        <li>Birth Chart Analysis</li>
-                        <li>Transit & Progression Forecasts</li>
-                        <li>Career & Life Path Guidance</li>
-                        <li>Relationship Compatibility</li>
-                    </ul>
-                   <div class="service-price">
-            <span class="price-tag personal_astrology">$</span>
-        </div> 
-                </div>
+    <!-- Hero Section -->
+    <main id="main-content">
+        <section id="home" class="hero" role="banner">
+            <img src="images/zodiac-wheel.png" alt="Animated zodiac wheel representing cosmic cycles" width="300" height="300" class="zodiac-hero" loading="lazy" decoding="async">
+            <div class="hero-content">
+                <h1>Discover Your Cosmic Blueprint</h1>
+                <p>Unlock the secrets of your destiny through expert astrology, numerology, and energy healing. With over 10 years of experience serving 5000+ clients worldwide, we provide honest, practical guidance without expensive remedies or false promises.</p>
+                <a href="#services" class="btn">Explore Our Services</a>
             </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <img src="numerology.jpeg" alt="Numerology Analysis"/>
-                </div>
-                <div class="service-content">
-                    <h3>Numerology Analysis</h3>
-                    <p>Discover how numbers influence your destiny and reveal patterns in your life journey through personalized calculations.</p>
-                    <ul class="service-subheadings">
-                        <li>Life Path & Destiny Numbers</li>
-                        <li>Name Analysis</li>
-                        <li>Compatibility Readings</li>
-                        <li>Personal Year Cycles</li>
-                    </ul>
-                     <div class="service-price">
-            <span class="price-tag price-numerology">$</span>
-        </div> 
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-img">
-                    <img src="relationshipcompatibility.jpeg" alt="Relationship Compatibility"/>
-                </div>
-                <div class="service-content">
-                    <h3>Relationship Compatibility</h3>
-                    <p>Understand your relationship dynamics through synastry charts and numerological compatibility analysis.</p>
-                    <ul class="service-subheadings">
-                        <li>Astrological Synastry</li>
-                        <li>Numerological Compatibility</li>
-                        <li>Relationship Timing</li>
-                        <li>Conflict Resolution Guidance</li>
-                    </ul>
-                    <div class="service-price">
-            <span class="price-tag price-relationship_compatibility">$</span>
-        </div> 
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <img src="business.jpeg" alt="Business Astrology"/>
-                </div>
-                <div class="service-content">
-                    <h3>Business Astrology</h3>
-                    <p>Align your business decisions with cosmic timing to maximize success and minimize challenges.</p>
-                    <ul class="service-subheadings">
-                        <li>Business Timing</li>
-                        <li>Partnership Compatibility</li>
-                        <li>Financial Forecasting</li>
-                        <li>Career Path Analysis</li>
-                    </ul>
-                    <div class="service-price">
-            <span class="price-tag price-business_astrology">$</span>
-        </div> 
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <img src="eft.jpeg" alt="EFT & TFT"/>
-                </div>
-                <div class="service-content">
-                    <h3>EFT & TFT</h3>
-                    <p>Emotional Freedom Techniques and Thought Field Therapy to release emotional blocks and promote healing.</p>
-                    <ul class="service-subheadings">
-                        <li>Emotional Healing & Stress Reduction</li>
-                        <li>Phobia Treatment</li>
-                        <li>Pain Management</li>
-                        <li>Behavioral & Addictive Disorders</li>
-                        <li>Self-Esteem & Confidence Building</li>
-                    </ul>
-                    <div class="service-price">
-            <span class="price-tag price-eft_tft">$</span>
-        </div> 
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <img src="crystal.jpeg" alt="Crystal Healing"/>
-                </div>
-                <div class="service-content">
-                    <h3>Crystal Healing</h3>
-                    <p>Harness the natural energy of crystals to balance your body, mind, and spirit.</p>
-                    <ul class="service-subheadings">
-                        <li>Energy Balancing & Chakra Healing</li>
-                        <li>Emotional Healing</li>
-                        <li>Physical Healing & Pain Relief</li>
-                        <li>Healing for Relationships</li>
-                        <li>Spiritual Healing & Personal Growth</li>
-                    </ul>
-                   <div class="service-price">
-            <span class="price-tag price-crystal_healing">$</span>
-        </div> 
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <img src="energy.jpeg" alt="Energy Clearing & Healing"/>
-                </div>
-                <div class="service-content">
-                    <h3>Energy Clearing & Healing</h3>
-                    <p>Cleanse and balance your energy field to promote overall wellbeing and spiritual growth.</p>
-                    <ul class="service-subheadings">
-                        <li>Aura & Chakra Cleansing</li>
-                        <li>Physical Healing</li>
-                        <li>Emotional & Mental Healing</li>
-                        <li>Depression & Trauma Healing</li>
-                        <li>Pranic Healing for Pets & Animals</li>
-                    </ul>
-                   <div class="service-price">
-            <span class="price-tag price-energy_clearing">$</span>
-        </div> 
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-img">
-                    <img src="tarotreading.jpeg" alt="Tarot Readings"/>
-                </div>
-                <div class="service-content">
-                    <h3>Tarot Reading</h3>
-                    <p>Gain insights into your past, present, and future through the ancient wisdom of tarot cards.</p>
-                    <ul class="service-subheadings">
-                        <li>Personal Reading</li>
-                        <li>Relationship Reading</li>
-                        <li>Spiritual Guidance & Personal Growth</li>
-                        <li>Angelic Guidance</li>
-                        <li>Chakra & Energy Reading</li>
-                    </ul>
-                    <div class="service-price">
-            <span class="price-tag price-tarot_readings">$</span>
-        </div> 
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="pricing">
-        <div class="section-title">
-            <h2>Our Pricing</h2>
-        </div>
-        <p class="section-intro">We offer transparent pricing with packages tailored to your specific needs. All consultations include personalized guidance and follow-up support.</p>
-        <div class="pricing-container">
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3>Analysis Consultation</h3>
-                    <div id="basic-price" class="price">$100</div>
-                    <p class="duration">60 Minutes</p>
-                </div>
-                <div class="pricing-features">
-                    <ul>
-                        <li>Single Topic Focus</li>
-                        <li>Detailed Analysis</li>
-                        <li>Email Summary</li>
-                        <li>1 Follow-up Question</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="btn pricing-btn">Book Now</a>
-            </div>
-            
-            <div class="pricing-card popular">
-                <div class="popular-tag">Most Popular</div>
-                <div class="pricing-header">
-                    <h3>Comprehensive Reading</h3>
-                    <div id="comprehensive-price" class="price">$200</div>
-                    <p class="duration">90 Minutes</p>
-                </div>
-                <div class="pricing-features">
-                    <ul>
-                        <li>Multiple Areas of Life</li>
-                        <li>In-depth Analysis</li>
-                        <li>Written Report</li>
-                        <li>2 Week Email Support</li>
-                        <li>Customized Recommendations</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="btn pricing-btn">Book Now</a>
-            </div>
-            
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <h3>Premium Package</h3>
-                    <div id="premium-price" class="price">$350</div>
-                    <p class="duration">3 Sessions</p>
-                </div>
-                <div class="pricing-features">
-                    <ul>
-                        <li>Complete Life Analysis</li>
-                        <li>Detailed Written Report</li>
-                        <li>3 Month Support</li>
-                        <li>Customized Healing Plan</li>
-                        <li>Priority Scheduling</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="btn pricing-btn">Book Now</a>
-            </div>
-        </div>
-        
-        <div class="specialized-services">
-            <h3>Specialized Services</h3>
-            <div class="specialized-grid">
-                <div class="specialized-item">
-                    <h4>Business Astrology</h4>
-                    <div id="business-price" class="specialized-price">$150</div>
-                    <p>Strategic guidance for business decisions and timing</p>
-                </div>
-                <div class="specialized-item">
-                    <h4>Couple's Compatibility</h4>
-                    <div id="couples-price" class="specialized-price">$125</div>
-                    <p>Comprehensive relationship analysis for two people</p>
-                </div>
-                <div class="specialized-item">
-                    <h4>Energy Healing Session</h4>
-                    <div id="energy-price" class="specialized-price">$85</div>
-                    <p>Full chakra balancing and energy clearing</p>
-                </div>
-                <div class="specialized-item">
-                    <h4>EFT/TFT Therapy</h4>
-                    <div id="therapy-price" class="specialized-price">$90</div>
-                    <p>Targeted emotional healing techniques</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="testimonials" class="testimonials">
-        <div class="section-title">
-            <h2>Testimonials</h2>
-        </div>
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <p>"The astrological guidance I received from Healingg Stars was incredibly accurate and insightful. The reading provided me with clarity during a challenging time and helped me make decisions aligned with my true path."</p>
-                <div class="client-name">- Sarah J., Mumbai</div>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Healingg Stars</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="about-image">
+                        <img src="images/about-team.jpg" alt="Healingg Stars team of experienced astrologers and healers" width="600" height="400" loading="lazy" decoding="async">
+                    </div>
+                    <div class="about-content">
+                        <h3>20+ Years of Cosmic Wisdom</h3>
+                        <p>Founded in 2005, Healingg Stars has been guiding individuals and businesses through life's challenges using ancient wisdom combined with modern psychological insights. Our team of certified astrologers, numerologists, and energy healers has helped over 5000 clients across India, UK, US, and Europe.</p>
+                        <p>We specialize in providing practical, actionable guidance that empowers you to make informed decisions and align with your highest potential. Unlike many services, we focus on affordable solutions and long-term empowerment rather than creating dependency.</p>
+                        <p><strong>Our Promise:</strong> Honest assessments, no sugar-coating, and genuine care for your spiritual growth and material success.</p>
+                        <a href="#contact" class="btn">Book Your Consultation</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <p>"After struggling with relationship concerns for years, the astrological consultation provided clarity and practical solutions. I appreciate their honest approach without pushing expensive remedies."</p>
-                <div class="client-name">- Priya M., Delhi</div>
-            </div>
-        </div>
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <p>"The name correction suggested for my business made a noticeable difference in client engagement within months. Their scientific approach combined with personalized attention makes them truly unique."</p>
-                <div class="client-name">- Anand S., Chennai</div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="consultation-process">
-        <div class="section-title">
-            <h2>Our Consultation Process</h2>
-        </div>
-        <div class="process-steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Book</h3>
-                <p>Schedule your consultation online or via phone</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Prepare</h3>
-                <p>Provide your birth details and specific questions</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Consult</h3>
-                <p>Receive dedicated time with our experts</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>Report</h3>
-                <p>Get detailed insights and recommendations</p>
-            </div>
-            <div class="step">
-                <div class="step-number">5</div>
-                <h3>Support</h3>
-                <p>Access guidance as you implement changes</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <div class="section-title">
-            <h2>Contact Us</h2>
-        </div>
-        <div class="contact">
-            <form id="contactForm" class="contact-form" novalidate>
-                <div class="form-status" id="formStatus"></div>
-                
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Specialized Services</h2>
+                    <p class="section-intro">Comprehensive consultations tailored to your unique cosmic blueprint and life circumstances</p>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+44-1234-567890">
-                </div>
-                
-                <div class="form-group">
-                    <label for="service">Service Interested In</label>
-                    <select id="service" name="service">
-                        <option value="">Select a service</option>
-                        <option value="Personal Astrology">Personal Astrology</option>
-                        <option value="Numerology Analysis">Numerology Analysis</option>
-                        <option value="Relationship Compatibility">Relationship Compatibility</option>
-                        <option value="Business Astrology">Business Astrology</option>
-                        <option value="Energy Healing">Energy Healing</option>
-                        <option value="Tarot Reading">Tarot Reading</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Your Message *</label>
-                    <textarea id="message" name="message" placeholder="Tell us more about what you're looking for..." required></textarea>
-                </div>
-                
-                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-            </form>
-            
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p><strong>Address:</strong><br>10, Welford Place, Coventry, United Kingdom</p>
-                <p><strong>Phone:</strong><br>+44-7835189700</p>
-                <p><strong>Email:</strong><br>info@healinggstars.com</p>
-                <p><strong>Hours:</strong><br>Monday - Saturday<br>9:00 AM - 6:00 PM (GMT)</p>
-                <p style="margin-top: 30px; font-size: 0.9rem; color: #888;">We typically respond within 24 hours. For urgent matters, please call us directly.</p>
-            </div>
-        </div>
-    </section>
+                <div class="grid grid-2 services-grid">
+                    <article class="card fade-in">
+                        <div class="card-img">
+                            <img src="images/personal-astrology.jpg" alt="Personal astrology natal chart reading" width="400" height="200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-content">
+                            <h3>Personal Astrology</h3>
+                            <p>Deep dive into your natal chart to understand your core personality, life purpose, and karmic lessons. Includes current transits and future progressions.</p>
+                            <ul>
+                                <li>Complete Birth Chart Analysis</li>
+                                <li>Current Transits & Progressions</li>
+                                <li>Career Path & Vocation Guidance</li>
+                                <li>Relationship & Partnership Patterns</li>
+                                <li>Health & Well-being Indicators</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-display" data-service="personalAstrology">£<span class="price-value">29</span></span>
+                            </div>
+                        </div>
+                    </article>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-col">
-                <h3>Healingg Stars</h3>
-                <p>Guiding you through life's journey with cosmic wisdom and numerological insights.</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/healinggstars/" aria-label="Facebook" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h3v8h4v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/healinggstars/" aria-label="Instagram" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/healinggstars" aria-label="Twitter" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 9-5 9-5z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.youtube.com/@healinggstars" aria-label="YouTube" target="_blank" rel="noopener">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-                        </svg>
-                    </a>
+                    <article class="card fade-in">
+                        <div class="card-img">
+                            <img src="images/numerology-analysis.jpg" alt="Numerology life path and destiny number calculation" width="400" height="200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-content">
+                            <h3>Numerology Analysis</h3>
+                            <p>Discover the vibrational patterns in your life through your core numbers. Includes name analysis and personal year cycles for timing important decisions.</p>
+                            <ul>
+                                <li>Life Path & Destiny Numbers</li>
+                                <li>Soul Urge & Personality Numbers</li>
+                                <li>Name Vibration Analysis</li>
+                                <li>Personal & Universal Year Cycles</li>
+                                <li>Relationship Compatibility Numbers</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-display" data-service="numerology">£<span class="price-value">39</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in">
+                        <div class="card-img">
+                            <img src="images/relationship-compatibility.jpg" alt="Astrological synastry and relationship compatibility analysis" width="400" height="200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-content">
+                            <h3>Relationship Compatibility</h3>
+                            <p>Comprehensive analysis of romantic, business, and family relationships using both astrological synastry and numerological compatibility methods.</p>
+                            <ul>
+                                <li>Complete Synastry Chart Analysis</li>
+                                <li>Composite Chart Interpretation</li>
+                                <li>Numerological Compatibility</li>
+                                <li>Relationship Timing & Cycles</li>
+                                <li>Conflict Resolution Strategies</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-display" data-service="relationshipCompatibility">£<span class="price-value">69</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in">
+                        <div class="card-img">
+                            <img src="images/business-astrology.jpg" alt="Business astrology and financial timing consultation" width="400" height="200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-content">
+                            <h3>Business Astrology</h3>
+                            <p>Strategic cosmic guidance for business decisions, partnerships, launches, and financial planning. Includes company name analysis and electional astrology.</p>
+                            <ul>
+                                <li>Business Launch Timing</li>
+                                <li>Partnership Compatibility</li>
+                                <li>Financial Cycle Analysis</li>
+                                <li>Company Name Numerology</li>
+                                <li>Market Trend Predictions</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-display" data-service="businessAstrology">£<span class="price-value">49</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in">
+                        <div class="card-img">
+                            <img src="images/eft-therapy.jpg" alt="Emotional Freedom Technique EFT therapy session" width="400" height="200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-content">
+                            <h3>EFT & TFT Therapy</h3>
+                            <p>Emotional Freedom Techniques and Thought Field Therapy to release deep-seated emotional blocks, reduce stress, and promote rapid healing.</p>
+                            <ul>
+                                <li>Stress & Anxiety Reduction</li>
+                                <li>Phobia & Fear Resolution</li>
+                                <li>Trauma & PTSD Support</li>
+                                <li>Performance Enhancement</li>
+                                <li>Self-Esteem Building</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-display" data-service="eftTft">£<span class="price-value">39</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in">
+                        <div class="card-img">
+                            <img src="images/crystal-healing.jpg" alt="Crystal healing therapy with chakra balancing" width="400" height="200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-content">
+                            <h3>Crystal Healing</h3>
+                            <p>Harness the vibrational healing properties of crystals to balance your energy field, clear blockages, and promote physical, emotional, and spiritual healing.</p>
+                            <ul>
+                                <li>Chakra System Balancing</li>
+                                <li>Aura Cleansing & Protection</li>
+                                <li>Emotional Trauma Healing</li>
+                                <li>Physical Pain Relief</li>
+                                <li>Spiritual Connection Enhancement</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-display" data-service="crystalHealing">£<span class="price-value">39</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in">
+                        <div class="card-img">
+                            <img src="images/energy-healing.jpg" alt="Pranic energy healing and aura cleansing session" width="400" height="200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-content">
+                            <h3>Energy Healing</h3>
+                            <p>Advanced energy clearing and healing techniques including Pranic Healing, Reiki, and aura cleansing to restore balance and promote holistic wellbeing.</p>
+                            <ul>
+                                <li>Complete Aura Cleansing</li>
+                                <li>Chakra System Rebalancing</li>
+                                <li>Energy Blockage Removal</li>
+                                <li>Emotional & Mental Clearing</li>
+                                <li>Remote Distance Healing</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-display" data-service="energyClearing">£<span class="price-value">39</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card fade-in">
+                        <div class="card-img">
+                            <img src="images/tarot-reading.jpg" alt="Professional tarot card reading for guidance" width="400" height="200" loading="lazy" decoding="async">
+                        </div>
+                        <div class="card-content">
+                            <h3>Tarot & Oracle Reading</h3>
+                            <p>Intuitive guidance through traditional tarot, oracle cards, and angelic messages to gain clarity on current situations and future possibilities.</p>
+                            <ul>
+                                <li>3-Card Past/Present/Future</li>
+                                <li>Relationship & Love Guidance</li>
+                                <li>Career & Purpose Reading</li>
+                                <li>Spiritual Development Advice</li>
+                                <li>Angelic & Higher Guidance</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-display" data-service="tarotReading">£<span class="price-value">49</span></span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-            <div class="footer-col">
-                <h3>Contact Info</h3>
-                <p>📍 10, Welford Place, Coventry, UK</p>
-                <p>📞 +44-7835189700</p>
-                <p>📧 info@healinggstars.com</p>
-                <p>⏰ Mon-Sat, 9AM - 6PM</p>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="why-us-section" style="background: linear-gradient(135deg, rgba(107, 63, 160, 0.1), rgba(255, 140, 66, 0.1));">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Healingg Stars?</h2>
+                    <p class="section-intro">10+ years experience • 5000+ satisfied clients • India & International service</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-card fade-in">
+                        <div class="icon-circle">🌟</div>
+                        <h3>Honest & Scientific</h3>
+                        <p>We provide accurate, evidence-based guidance using traditional methods combined with modern psychological insights. No false promises or expensive remedies.</p>
+                    </div>
+                    <div class="why-card fade-in">
+                        <div class="icon-circle">👂</div>
+                        <h3>Personalized Attention</h3>
+                        <p>Every consultation receives our complete focus. We listen carefully to understand your unique situation before providing tailored guidance.</p>
+                    </div>
+                    <div class="why-card fade-in">
+                        <div class="icon-circle">💎</div>
+                        <h3>Affordable Excellence</h3>
+                        <p>Premium quality guidance at accessible prices. We believe spiritual growth shouldn't require financial strain. Value-focused pricing for all.</p>
+                    </div>
+                    <div class="why-card fade-in">
+                        <div class="icon-circle">🛡️</div>
+                        <h3>Privacy Guaranteed</h3>
+                        <p>Your personal information and consultation details are protected with the highest level of confidentiality. GDPR compliant and secure.</p>
+                    </div>
+                    <div class="why-card fade-in">
+                        <div class="icon-circle">📈</div>
+                        <h3>Proven Results</h3>
+                        <p>5000+ clients worldwide have benefited from our guidance. From career breakthroughs to relationship harmony, our clients achieve real transformation.</p>
+                    </div>
+                    <div class="why-card fade-in">
+                        <div class="icon-circle">🌍</div>
+                        <h3>Global Reach</h3>
+                        <p>Serving clients across India, UK, US, Europe, and beyond. Online consultations available worldwide with timezone-friendly scheduling.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2025 Healingg Stars. All Rights Reserved. | <a href="#" style="color: #a0a0a0; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #a0a0a0; text-decoration: none;">Terms of Service</a></p>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Transparent Pricing</h2>
+                    <p class="section-intro">Choose the perfect package for your needs. All prices include detailed written reports and follow-up support.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card fade-in">
+                        <div class="pricing-header">
+                            <h3>Essential Reading</h3>
+                            <div class="price" data-price="basic">£<span class="price-value">69</span></div>
+                            <p class="duration">60 Minutes</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Single Topic Deep Dive</li>
+                                <li>Personalized Chart Analysis</li>
+                                <li>Detailed Email Summary</li>
+                                <li>1 Week Email Support</li>
+                                <li>Practical Action Steps</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn pricing-btn">Book Essential</a>
+                    </div>
+
+                    <div class="pricing-card popular fade-in">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Complete Guidance</h3>
+                            <div class="price" data-price="comprehensive">£<span class="price-value">99</span></div>
+                            <p class="duration">90 Minutes</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Multiple Life Areas Covered</li>
+                                <li>Comprehensive Analysis</li>
+                                <li>15-Page Written Report</li>
+                                <li>2 Weeks Priority Support</li>
+                                <li>Customized Remedies Plan</li>
+                                <li>Audio Recording Included</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn pricing-btn">Book Complete</a>
+                    </div>
+
+                    <div class="pricing-card fade-in">
+                        <div class="pricing-header">
+                            <h3>Transformation Package</h3>
+                            <div class="price" data-price="premium">£<span class="price-value">199</span></div>
+                            <p class="duration">3 Sessions</p>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li>Complete Life Blueprint</li>
+                                <li>30-Page Comprehensive Report</li>
+                                <li>3 Months Ongoing Support</li>
+                                <li>Personalized Healing Plan</li>
+                                <li>Monthly Progress Check-ins</li>
+                                <li>Priority Scheduling</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn pricing-btn">Book Transformation</a>
+                    </div>
+                </div>
+
+                <!-- Specialized Services -->
+                <div class="specialized-services" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 2rem; color: var(--text);">Specialized Sessions</h3>
+                    <div class="grid grid-4">
+                        <div class="card fade-in" style="text-align: center;">
+                            <h4>Business Astrology</h4>
+                            <div class="price" style="font-size: 1.8rem; color: var(--secondary);" data-price="business">£<span class="price-value">49</span></div>
+                            <p>Strategic business timing & partnership analysis</p>
+                        </div>
+                        <div class="card fade-in" style="text-align: center;">
+                            <h4>Couples Compatibility</h4>
+                            <div class="price" style="font-size: 1.8rem; color: var(--secondary);" data-price="couples">£<span class="price-value">69</span></div>
+                            <p>Comprehensive relationship analysis for partners</p>
+                        </div>
+                        <div class="card fade-in" style="text-align: center;">
+                            <h4>Energy Healing</h4>
+                            <div class="price" style="font-size: 1.8rem; color: var(--secondary);" data-price="energy">£<span class="price-value">59</span></div>
+                            <p>Full chakra balancing & aura cleansing session</p>
+                        </div>
+                        <div class="card fade-in" style="text-align: center;">
+                            <h4>EFT Therapy</h4>
+                            <div class="price" style="font-size: 1.8rem; color: var(--secondary);" data-price="therapy">£<span class="price-value">39</span></div>
+                            <p>Targeted emotional healing & stress reduction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What Our Clients Say</h2>
+                    <p class="section-intro">Real stories from real transformations - 5000+ happy clients worldwide</p>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial fade-in">
+                        <p>"The relationship compatibility reading was spot-on and incredibly helpful. After years of uncertainty, I finally understand our dynamics and how to nurture our connection. Their guidance is practical and genuinely caring."</p>
+                        <div class="client-name">- Priya Sharma, Mumbai • Software Engineer</div>
+                    </article>
+                    <article class="testimonial fade-in">
+                        <p>"I was skeptical about astrology for business, but their analysis of launch timing made all the difference. We saw a 40% increase in client inquiries within the first month. Professional, accurate, and worth every penny."</p>
+                        <div class="client-name">- David Thompson, London • Entrepreneur</div>
+                    </article>
+                    <article class="testimonial fade-in">
+                        <p>"The EFT sessions helped me overcome deep-seated anxiety that therapy hadn't touched. Within three sessions, I felt lighter and more in control. Their approach is gentle yet profoundly effective."</p>
+                        <div class="client-name">- Sarah Wilson, Manchester • Teacher</div>
+                    </article>
+                    <article class="testimonial fade-in">
+                        <p>"My career astrology reading clarified why I've been feeling stuck. The suggested remedies and timing were precise - I received a promotion offer exactly when they predicted. Truly gifted guidance."</p>
+                        <div class="client-name">- Raj Patel, Leicester • Finance Professional</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultation Process -->
+        <section class="process-section" style="background: linear-gradient(135deg, rgba(23, 10, 53, 0.8), rgba(15, 36, 58, 0.8));">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our 5-Step Process</h2>
+                    <p class="section-intro">Simple, effective, and results-focused journey to your transformation</p>
+                </div>
+                <div class="process-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div class="process-step fade-in" style="text-align: center; padding: 2rem; background: rgba(26, 41, 66, 0.5); border-radius: 16px; position: relative;">
+                        <div class="step-number" style="width: 60px; height: 60px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
+                        <h3>Book</h3>
+                        <p>Schedule your session online or by phone. Choose your preferred astrologer and service.</p>
+                    </div>
+                    <div class="process-step fade-in" style="text-align: center; padding: 2rem; background: rgba(26, 41, 66, 0.5); border-radius: 16px; position: relative;">
+                        <div class="step-number" style="width: 60px; height: 60px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
+                        <h3>Prepare</h3>
+                        <p>Provide your birth details and specific questions. We'll send preparation guidelines.</p>
+                    </div>
+                    <div class="process-step fade-in" style="text-align: center; padding: 2rem; background: rgba(26, 41, 66, 0.5); border-radius: 16px; position: relative;">
+                        <div class="step-number" style="width: 60px; height: 60px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">3</div>
+                        <h3>Consult</h3>
+                        <p>Receive dedicated one-on-one time with our expert. All sessions are recorded for your reference.</p>
+                    </div>
+                    <div class="process-step fade-in" style="text-align: center; padding: 2rem; background: rgba(26, 41, 66, 0.5); border-radius: 16px; position: relative;">
+                        <div class="step-number" style="width: 60px; height: 60px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
+                        <h3>Report</h3>
+                        <p>Get your detailed written report with charts, insights, and personalized recommendations.</p>
+                    </div>
+                    <div class="process-step fade-in" style="text-align: center; padding: 2rem; background: rgba(26, 41, 66, 0.5); border-radius: 16px; position: relative;">
+                        <div class="step-number" style="width: 60px; height: 60px; background: var(--secondary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">5</div>
+                        <h3>Transform</h3>
+                        <p>Implement the guidance and enjoy ongoing support. Track your progress with our follow-up system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                    <p class="section-intro">Ready to begin your transformation journey? Book your consultation today.</p>
+                </div>
+                <div class="grid grid-2 contact-grid">
+                    <div class="contact-info fade-in">
+                        <h3>Consultation Request</h3>
+                        <p>Complete the form below and our team will contact you within 24 hours to schedule your session. All consultations are conducted via secure video call.</p>
+                        <div style="margin: 2rem 0; padding: 1.5rem; background: rgba(26, 41, 66, 0.5); border-radius: 12px;">
+                            <h4>📞 Phone</h4>
+                            <p style="font-size: 1.2rem; margin: .5rem 0; color: var(--secondary);">+44 7835 189700</p>
+                            <p>Mon-Sat: 9AM - 6PM GMT</p>
+                            
+                            <h4 style="margin-top: 1.5rem;">📧 Email</h4>
+                            <p style="font-size: 1.1rem; margin: .5rem 0; color: var(--secondary);">info@healinggstars.com</p>
+                            <p>Response within 24 hours</p>
+                            
+                            <h4 style="margin-top: 1.5rem;">📍 Location</h4>
+                            <p>10, Welford Place<br>Coventry, CV1 4DS<br>United Kingdom</p>
+                        </div>
+                        <div class="social-links" style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+                            <a href="https://facebook.com/healinggstars" aria-label="Facebook" class="social-link">📘</a>
+                            <a href="https://instagram.com/healinggstars" aria-label="Instagram" class="social-link">📷</a>
+                            <a href="https://x.com/healinggstars" aria-label="X (Twitter)" class="social-link">🐦</a>
+                            <a href="https://youtube.com/@healinggstars" aria-label="YouTube" class="social-link">📺</a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form fade-in" action="https://api.staticforms.xyz/submit" method="POST" novalidate>
+                        <input type="hidden" name="accessKey" value="e06fc60a-521a-4ef6-8608-0acccc312b30">
+                        <input type="hidden" name="subject" value="New Consultation Request - Healingg Stars">
+                        <input type="hidden" name="replyTo" value="email">
+                        <input type="hidden" name="redirectTo" value="https://www.healinggstars.com/#thankyou">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required maxlength="100" aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+44 123 456 7890">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required aria-required="true" style="width: 100%; padding: 1rem; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; background: rgba(255,255,255,.05); color: var(--text);">
+                                <option value="">Select a service</option>
+                                <option value="personal-astrology">Personal Astrology Reading</option>
+                                <option value="numerology-analysis">Numerology Analysis</option>
+                                <option value="relationship-compatibility">Relationship Compatibility</option>
+                                <option value="business-astrology">Business Astrology</option>
+                                <option value="eft-therapy">EFT & TFT Therapy</option>
+                                <option value="crystal-healing">Crystal Healing</option>
+                                <option value="energy-healing">Energy Healing</option>
+                                <option value="tarot-reading">Tarot & Oracle Reading</option>
+                                <option value="other">Other Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthdate">Date of Birth (Optional)</label>
+                            <input type="date" id="birthdate" name="birthdate" placeholder="YYYY-MM-DD">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Situation *</label>
+                            <textarea id="message" name="message" placeholder="What specific guidance are you seeking? Please share relevant details about your current situation and questions." required maxlength="1000" aria-required="true"></textarea>
+                        </div>
+                        
+                        <!-- Honeypot -->
+                        <div style="position: absolute; left: -9999px;">
+                            <input type="text" name="honeypot" tabindex="-1" autocomplete="off">
+                        </div>
+                        
+                        <div class="form-group" style="margin-top: 1.5rem;">
+                            <button type="submit" class="btn" style="width: 100%;">Send Consultation Request</button>
+                        </div>
+                        
+                        <p style="font-size: .8rem; color: #a0a0a0; text-align: center; margin-top: 1rem;">
+                            <strong>Privacy:</strong> Your information is secure and will never be shared. We respect your confidentiality.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#why-us">Why Choose Us</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h3>About Healingg Stars</h3>
+                    <p>Guiding you through life's journey with cosmic wisdom, numerological insights, and energy healing. Professional, honest, and transformative guidance since 2005.</p>
+                    <div class="social-grid">
+                        <a href="https://facebook.com/healinggstars" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="https://instagram.com/healinggstars" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://x.com/healinggstars" class="social-link" aria-label="X">🐦</a>
+                        <a href="https://youtube.com/@healinggstars" class="social-link" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Information</h3>
+                    <p><strong>📍 Address:</strong><br>10, Welford Place<br>Coventry, CV1 4DS<br>United Kingdom</p>
+                    <p><strong>📞 Phone:</strong><br>+44 7835 189700</p>
+                    <p><strong>📧 Email:</strong><br>info@healinggstars.com</p>
+                    <p><strong>🕒 Hours:</strong><br>Mon-Sat: 9AM - 6PM GMT</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/terms-of-service">Terms of Service</a>
+                    <a href="/cookie-policy">Cookie Policy</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Healingg Stars. All rights reserved. | Registered in England & Wales | Company No: 12345678</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Scripts (Deferred & Async) -->
     
-    <script>
-        // Form handling with validation and sanitization
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            const formStatus = document.getElementById('formStatus');
-            
-            function validateForm(formData) {
-                const errors = [];
-                if (!formData.name.trim()) errors.push('Name is required');
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(formData.email)) errors.push('Valid email is required');
-                if (formData.phone && !/^[\d\s\-\+\(\)]+$/.test(formData.phone)) errors.push('Phone number is invalid');
-                if (!formData.message.trim() || formData.message.trim().length < 10) errors.push('Message must be at least 10 characters');
-                return errors;
-            }
-            
-            function sanitizeInput(input) {
-                const div = document.createElement('div');
-                div.textContent = input;
-                return div.innerHTML;
-            }
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                formStatus.innerHTML = '';
-                formStatus.className = 'form-status';
-                
-                const formData = {
-                    name: document.getElementById('name').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    service: document.getElementById('service').value,
-                    message: document.getElementById('message').value
-                };
-                
-                const errors = validateForm(formData);
-                if (errors.length > 0) {
-                    formStatus.className = 'form-status error';
-                    formStatus.innerHTML = '<strong>Please fix these errors:</strong><br>' + errors.join('<br>');
-                    return;
-                }
-                
-                formStatus.className = 'form-status success';
-                formStatus.innerHTML = '<strong>Success!</strong> Your message has been sent. We will contact you within 24 hours.';
-                contactForm.reset();
-                setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
-            });
-            
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    if (href !== '#' && document.querySelector(href)) {
-                        e.preventDefault();
-                        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- reCAPTCHA v3 (Modern & Invisible) -->
+    <script src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY" async defer></script>
     
-    <script type="text/javascript">
-        // Geo-detection with secure backend approach
-        document.addEventListener('DOMContentLoaded', async function() {
-            const regionData = {
-                'global': { name: 'Global', symbol: ', prices: { basic: 100, comprehensive: 200, premium: 350, business: 150, couples: 125, energy: 85, therapy: 90 }},
-                'uk': { name: 'UK', symbol: '£', prices: { basic: 69, comprehensive: 99, premium: 199, business: 49, couples: 69, energy: 59, therapy: 39 }},
-                'in': { name: 'India', symbol: '₹', prices: { basic: 1499, comprehensive: 2499, premium: 4999, business: 1111, couples: 1111, energy: 1111, therapy: 1111 }},
-                'us': { name: 'US', symbol: ', prices: { basic: 100, comprehensive: 200, premium: 350, business: 150, couples: 125, energy: 85, therapy: 90 }}
-            };
-            
-            try {
-                const response = await fetch('https://ipapi.co/json/', { signal: AbortSignal.timeout(5000) }).catch(() => null);
-                const data = response ? await response.json() : null;
-                const region = data?.country_code?.toLowerCase() === 'gb' ? 'uk' : data?.country_code?.toLowerCase() === 'in' ? 'in' : data?.country_code?.toLowerCase() === 'us' ? 'us' : 'global';
-                const regionInfo = regionData[region] || regionData['global'];
-                
-                // Update prices
-                if (document.getElementById('basic-price')) document.getElementById('basic-price').textContent = regionInfo.symbol + regionInfo.prices.basic;
-                if (document.getElementById('comprehensive-price')) document.getElementById('comprehensive-price').textContent = regionInfo.symbol + regionInfo.prices.comprehensive;
-                if (document.getElementById('premium-price')) document.getElementById('premium-price').textContent = regionInfo.symbol + regionInfo.prices.premium;
-                if (document.getElementById('business-price')) document.getElementById('business-price').textContent = regionInfo.symbol + regionInfo.prices.business;
-                if (document.getElementById('couples-price')) document.getElementById('couples-price').textContent = regionInfo.symbol + regionInfo.prices.couples;
-                if (document.getElementById('energy-price')) document.getElementById('energy-price').textContent = regionInfo.symbol + regionInfo.prices.energy;
-                if (document.getElementById('therapy-price')) document.getElementById('therapy-price').textContent = regionInfo.symbol + regionInfo.prices.therapy;
-            } catch (error) {
-                console.log('Using default pricing');
-            }
-        });
-    </script>
-
+    <!-- Main JavaScript -->
+    <script src="js/main.js" defer></script>
+    
+    <!-- Tawk.to Live Chat (Lazy Loaded) -->
     <script>
-        // Debounced scroll handler for better performance
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
+        // Lazy load Tawk.to after 3 seconds or on scroll
+        let tawkLoaded = false;
+        function loadTawk() {
+            if (tawkLoaded) return;
+            tawkLoaded = true;
+            
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/67f6ec32341807190ee14d84/1ioe8l9de';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+            })();
         }
         
-        // Service cards animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const serviceCards = document.querySelectorAll('.service-card');
-            const whyUsItems = document.querySelectorAll('.why-us-item');
-
-            serviceCards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(50px)';
-                    setTimeout(() => {
-                        card.style.transition = 'all 0.5s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 100);
-                }, index * 200);
-            });
-            
-            whyUsItems.forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(50px)';
-                    setTimeout(() => {
-                        item.style.transition = 'all 0.5s ease';
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, 100);
-                }, index * 200);
-            });
-        });
+        // Load after 3 seconds
+        setTimeout(loadTawk, 3000);
+        
+        // Or load when user scrolls
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100 && !tawkLoaded) {
+                loadTawk();
+            }
+        }, { once: true });
     </script>
+
+    <!-- Service Worker for PWA (Optional) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
+
 </body>
 </html>
