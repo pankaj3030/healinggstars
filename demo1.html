@@ -41,6 +41,341 @@
     <link rel="dns-prefetch" href="https://ipinfo.io">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.healinggstars.com/#organization",
+      "name": "Healingg Stars",
+      "url": "https://www.healinggstars.com",
+      "logo": "https://www.healinggstars.com/logo.png",
+      "description": "Expert astrology, numerology, and spiritual healing services. Discover your path to harmony and success with certified practitioners.",
+      "sameAs": [
+        "https://www.facebook.com/healinggstars/",
+        "https://www.instagram.com/healinggstars/",
+        "https://x.com/healinggstars",
+        "https://www.youtube.com/@healinggstars"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "telephone": "+44-7835189700",
+        "email": "info@healinggstars.com",
+        "availableLanguage": ["en"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10, Welford Place",
+        "addressLocality": "Coventry",
+        "addressCountry": "GB",
+        "postalCode": "CV1 3GU"
+      },
+      "foundingDate": "2014",
+      "knowsAbout": [
+        "Astrology",
+        "Numerology",
+        "Tarot Reading",
+        "Energy Healing",
+        "Crystal Healing",
+        "Spiritual Guidance"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.healinggstars.com/#localbusiness",
+      "name": "Healingg Stars",
+      "image": "https://www.healinggstars.com/logo.png",
+      "description": "Professional astrology and spiritual healing services",
+      "url": "https://www.healinggstars.com",
+      "telephone": "+44-7835189700",
+      "email": "info@healinggstars.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10, Welford Place",
+        "addressLocality": "Coventry",
+        "addressRegion": "England",
+        "postalCode": "CV1 3GU",
+        "addressCountry": "GB"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.healinggstars.com/#service-personal-astrology",
+      "name": "Personal Astrology",
+      "description": "Comprehensive natal chart readings and life path guidance through detailed astrological analysis",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Astrology Consultation",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "-180,-90,180,90"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "80",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.healinggstars.com/#service-numerology",
+      "name": "Numerology Analysis",
+      "description": "Discover how numbers influence your destiny and reveal patterns in your life journey",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Numerology Consultation",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "-180,-90,180,90"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "75",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.healinggstars.com/#service-tarot",
+      "name": "Tarot Reading",
+      "description": "Gain insights into your past, present, and future through the ancient wisdom of tarot cards",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Tarot Reading",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "-180,-90,180,90"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "65",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.healinggstars.com/#service-energy-healing",
+      "name": "Energy Clearing & Healing",
+      "description": "Cleanse and balance your energy field to promote overall wellbeing and spiritual growth",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Energy Healing",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "-180,-90,180,90"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "80",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.healinggstars.com/#service-crystal-healing",
+      "name": "Crystal Healing",
+      "description": "Harness the natural energy of crystals to balance your body, mind, and spirit",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Crystal Healing",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "-180,-90,180,90"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "70",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.healinggstars.com/#service-eft-tft",
+      "name": "EFT & TFT Therapy",
+      "description": "Emotional Freedom Techniques and Thought Field Therapy to release emotional blocks",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Emotional Healing",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "-180,-90,180,90"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "85",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.healinggstars.com/#service-relationship-compatibility",
+      "name": "Relationship Compatibility",
+      "description": "Understand relationship dynamics through synastry charts and numerological compatibility analysis",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Relationship Counseling",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "-180,-90,180,90"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "95",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.healinggstars.com/#service-business-astrology",
+      "name": "Business Astrology",
+      "description": "Align your business decisions with cosmic timing to maximize success and minimize challenges",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "serviceType": "Business Consultation",
+      "areaServed": {
+        "@type": "GeoShape",
+        "box": "-180,-90,180,90"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "120",
+        "priceValidUntil": "2026-12-31"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.healinggstars.com/#consultation-packages",
+      "name": "Consultation Packages",
+      "provider": {
+        "@id": "https://www.healinggstars.com/#organization"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Healingg Stars Service Packages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Analysis Consultation",
+            "description": "60-minute single topic consultation with detailed analysis",
+            "priceCurrency": "USD",
+            "price": "100",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Comprehensive Reading",
+            "description": "90-minute consultation covering multiple life areas with written report",
+            "priceCurrency": "USD",
+            "price": "200",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium Package",
+            "description": "3-session package with complete life analysis and 3-month support",
+            "priceCurrency": "USD",
+            "price": "350",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": "https://www.healinggstars.com/#review1",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sarah J."
+      },
+      "reviewBody": "The astrological guidance I received from Healingg Stars was incredibly accurate and insightful.",
+      "datePublished": "2024-06-15"
+    },
+    {
+      "@type": "Review",
+      "@id": "https://www.healinggstars.com/#review2",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Priya M."
+      },
+      "reviewBody": "After struggling with relationship concerns for years, the consultation provided clarity and practical solutions.",
+      "datePublished": "2024-05-20"
+    },
+    {
+      "@type": "Review",
+      "@id": "https://www.healinggstars.com/#review3",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Anand S."
+      },
+      "reviewBody": "The name correction suggested for my business made a noticeable difference in client engagement within months.",
+      "datePublished": "2024-04-10"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.healinggstars.com/#website",
+      "name": "Healingg Stars",
+      "url": "https://www.healinggstars.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.healinggstars.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
     
     <title>Healingg Stars - Astrology & Numerology Services</title>
     
